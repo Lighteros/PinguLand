@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Site Metas -->
+    <meta name="keywords" content="PINGU, memecoin, cryptocurrency" />
+    <meta
+      name="description"
+      content="Welcome to PINGU: The Memecoin Revolution!"
+    />
+    <meta name="author" content="Founding Fathers" />
+
+    <title>Memes | pingulandcto</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/banner/Sheriff_Pingu_2_compressed.png"
+    />
+    <!-- font awesome css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto Slab"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/fonts/Riders of the Wild West.css"
+    />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px; /* Adjust the gap between grid items */
+      padding: 10px;  
+    }
+
+    .column {
+      width: 100%; /* Ensure each column is 100% within its grid cell */
+    }
+
+    .column img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Ensures consistent image scaling */
+      border-radius: 5px; /* Optional: add rounded corners to images */
+    }
+
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+    /* Following code for the banner with repeated $PINGU  ---------------------------------------------------------*/
+    .scrolling-banner {
+      width: 100%;
+      background-color: #dee0e0;
+      color: #291916;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      font-size: 24px;
+      display: flex;
+      align-items: center; /* Vertically center the text */
+      height: 50px; /* Set a height for the banner */
+    }
+
+    .scrolling-banner p {
+      display: inline-block;
+      animation: scroll-left 30s linear infinite; /* Slowed down the scroll speed */
+      margin: 0;
+      white-space: nowrap;
+      /* font-weight: bold; */
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .scrolling-banner span {
+      margin: 0 20px;
+    }
+    .scrolling-banner {
+      position: relative;
+      overflow: hidden;
+    }
+    /* Basic styling for the contract address */
+    #contract-address {
+      cursor: pointer;
+      position: relative;
+    }
+
+    /* Styling for the move logo */
+    .move-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    /* Change the move logo appearance on hover over the contract address */
+    #contract-address:hover + .move-icon {
+      transform: rotate(20deg); /* Example effect */
+    }
+
+    .copy-icon {
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+    /* Centered Tooltip */
+    .tooltip {
+      visibility: hidden;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 14px;
+      z-index: 1000;
+      transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+      opacity: 0;
+    }
+
+    .tooltip.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+  <style>
+    /* Style for the PINGU-NOMICS main heading */
+    .heading_container h2 {
+      text-align: center !important;
+      margin-bottom: 40px !important;
+      margin-top: 30px !important;
+      align-self: center !important;
+    }
+    .about_section .heading_container h2,
+    .service_section .heading_container h2,
+    .roadmap_section .heading_container h2 {
+      color: #fff; /* Text color */
+      font-family: "Blacknorthdemo"; /* Font family */
+    }
+
+    .heading_container {
+      position: relative;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(
+        to bottom right,
+        rgba(194, 77, 0),
+        rgb(107, 45, 17)
+      );
+      color: #fff;
+      padding: 10px 0;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .heading_container h2 {
+      transform: translateX(-100px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .heading_container.visible h2 {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .about_section .heading_container {
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .heading_container {
+        padding-top: 0px !important;
+      }
+    }
+  </style>
+  <body style="background-color: #f2c3b2">
+    <!-- <div class="scrolling-banner">
+      <p>
+        <span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please
+          ensure you're visiting
+
+          <u><strong>PINGU.LAND</strong></u
+          >. Verify the contract address is
+          <b>
+            <u
+              id="contract-address"
+              onclick="copyText('2idBzH45gfXFEhivcQVTXVgQGUDhX8scXoZwAiTQUT6L', this)"
+            >
+              2idBzH45gfXFEhivcQVTXVgQGUDhX8scXoZwAiTQUT6L
+              <i class="copy-icon">📋</i>
+            </u> </b
+          >. This project is <strong><u>SOLANA-ONLY</u></strong
+          >. Double-check all details to avoid scams.
+        </span>
+      </p>
+    </div> -->
+    <div id="copy-tooltip" class="tooltip">Copied!</div>
+    <div>
+      <!-- Updated slider section -->
+      <section>
+        <div class="heading_container">
+          <h2>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome
+            to Pingu.Land | Memes
+          </h2>
+          <h2>
+            <div class="footer_social_icons">
+              <a href="https://t.me/pingulandcto_memes" target="_blank"
+                ><i class="fab fa-telegram-plane"></i
+              ></a>
+            </div>
+          </h2>
+        </div>
+      </section>
+    </div>
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+    
+    <!-- Photo Grid -->
+    <div class="row">
+      <div class="column">
+        <!-- Column 1: Images 1-25 -->
+        <!-- <img src="https://www.pingu.land//images/memes/meme_1.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_2.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_3.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_4.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_5.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_6.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_7.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <!-- <img src="https://www.pingu.land//images/memes/meme_8.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_9.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_10.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_11.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_12.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_13.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_14.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_15.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_16.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_17.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_18.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_19.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_20.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_21.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <!-- <img src="https://www.pingu.land//images/memes/meme_22.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_23.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_24.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_25.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_100.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_101.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_102.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_103.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_104.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_105.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_106.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_107.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_108.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_109.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_110.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_133.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_146.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+      </div>
+
+      <div class="column">
+        <!-- Column 2: Images 26-50 -->
+        <img src="https://www.pingu.land//images/memes/meme_26.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_27.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_28.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_29.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_30.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_31.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_32.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_33.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_34.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_35.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_36.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_37.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_38.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_39.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_40.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_41.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_42.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_43.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_44.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_45.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_46.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_47.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_48.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_49.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_50.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_111.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_112.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_113.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_114.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_115.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_116.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_117.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_118.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_119.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_120.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_121.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+      </div>
+
+      <div class="column">
+        <!-- Column 3: Images 51-75 -->
+        <img src="https://www.pingu.land//images/memes/meme_51.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_52.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_53.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_54.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_55.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_56.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_57.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_58.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_59.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_60.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_61.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_62.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_63.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_64.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_65.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_66.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_67.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_68.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_69.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_70.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_71.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_72.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_73.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_122.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_124.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_125.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_126.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_127.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_128.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_129.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_130.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_131.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_132.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+      </div>
+
+      <div class="column">
+        <!-- Column 4: Images 76-99 -->
+        <img src="https://www.pingu.land//images/memes/meme_76.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_77.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_78.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_79.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_80.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_81.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_82.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_83.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_84.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_85.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_86.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_87.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_88.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_89.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_90.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_91.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_92.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_93.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_95.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_96.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_97.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_98.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_99.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_75.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_74.jpg" style="width: 100%" onclick="enlargeImage(this)" />    
+        <img src="https://www.pingu.land//images/memes/meme_134.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_135.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_136.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_137.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_138.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_139.PNG" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_140.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_141.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_142.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <!-- <img src="https://www.pingu.land//images/memes/meme_143.jpg" style="width: 100%" onclick="enlargeImage(this)" /> -->
+        <img src="https://www.pingu.land//images/memes/meme_144.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+        <img src="https://www.pingu.land//images/memes/meme_145.jpg" style="width: 100%" onclick="enlargeImage(this)" />
+    
+      </div>
+    </div>
+
+    <!-- end service section -->
+    
+    <!-- end service section -->
+    <footer class="footer_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"></div>
+          <div class="text-right">
+            <h4>@PingulandOwn</h4>
+            <div class="footer_social_icons">
+              <a href="https://t.me/Pinguland_Erc20" target="_blank"
+                ><i class="fab fa-telegram-plane"></i
+              ></a>
+              <a href="https://x.com/Pinguland_Erc20" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="partner-logo-container">
+                <div class="box unique-features-box partner-logo">
+                  <a
+                    href="https://dexscreener.com/ethereum/0x00000000000000000000000000000000000000"
+                    target="_blank"
+                  >
+                    <div class="icon-box unique-features-icon-box">
+                      <img
+                        src="/images/icons/dexscreener.png"
+                        alt="Dexscreener Icon"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="box unique-features-box partner-logo">
+                  <a
+                    href="https://www.dextools.io/app/en/ether/pool-explorer/0x00000000000000000000000000000000000000"
+                    target="_blank"
+                  >
+                    <div class="icon-box unique-features-icon-box">
+                      <img
+                        src="/images/icons/dextools.png"
+                        alt="Dextools Icon"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="row footer-ca-row">
+                <div class="col-12 col-md-8 text-center">
+                  <b>
+                     
+                    <div
+                      id="contract-address"
+                      class="mobile-text-break"
+                      onclick="copyText('2idBzH45gfXFEhivcQVTXVgQGUDhX8scXoZwAiTQUT6L', this)"
+                    >
+                    CA:&nbsp;&nbsp;&nbsp;<u>2idBzH45gfXFEhivcQVTXVgQGUDhX8scXoZwAiTQUT6L</u>
+                      <br />
+                  </div>
+                  </b>
+                </div>
+              </div>
+        <div class="row">
+          <div class="col-12 text-center" style="margin-bottom: 50px">
+            <!-- <p>&copy; 2024 Pingu.Land</p> -->
+            <p class="disclaimer">
+              <strong>DISCLAIMER:</strong> <br />
+              $PINGU is lawless and has no value. Prices may rise, fall, or vanish. Don't risk what you can't afford to lose. Saddle up, partner—it's a wild ride.
+            </p>
+            <!-- <p>
+              Our digital video content was expertly crafted by
+              <strong>ManyMoons Studios.</strong> -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three./js/r128/three.min.js"></script>
+    <script type="text/javascript" src="/js/custom_v1.js"></script>
+  </body>
+  <script>
+    function copyText(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      // Show tooltip at the center of the viewport
+      const tooltip = document.getElementById("copy-tooltip");
+      tooltip.classList.add("show");
+
+      // Hide tooltip after 1 second
+      setTimeout(() => {
+        tooltip.classList.remove("show");
+      }, 1000);
+    }
+  </script>
+  <style>
+    .footer_section {
+      background-color: #000;
+      /* background: linear-gradient(
+        to bottom right,
+        rgba(218, 157, 128),
+        rgba(194, 77, 0)
+      ); */
+
+      padding: 20px 0;
+      color: #fff;
+    }
+
+    .footer_section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer_section .buy_button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 10px 20px;
+      border: 2px solid #000;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .footer_section .buy_button:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #fff;
+    }
+
+    .footer_section h4 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      /* font-weight: bold; */
+    }
+
+    .footer_section .footer_social_icons a {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .footer_section .footer_social_icons a:hover {
+      color: #d39153;
+    }
+
+    .footer_section .disclaimer {
+      margin-top: 10px;
+      font-size: 0.875rem;
+      color: #ccc;
+    }
+
+    .footer_section p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      .footer_section .buy_button {
+        display: block;
+        margin: 20px auto; /* Center the button with margin */
+      }
+
+      .footer_section h4,
+      .footer_section .footer_social_icons {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 1300px) {
+      .footer_section .container {
+        padding-right: 55px; /* Add padding to prevent content cut-off */
+      }
+    }
+    /* Add @font-face rule to your CSS */
+    @font-face {
+      font-family: "Blacknorthdemo";
+      src: url("/fonts/Blacknorthdemo-mLE25.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* CSS rules to apply the fonts */
+    h1,
+    h2,
+    h5 {
+      font-family: "Blacknorthdemo";
+    }
+    body,
+    p {
+      font-family: "Blacknorthdemo";
+    }
+    /* .footer_social_icons a {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .footer_social_icons a:hover {
+      color: #d39153;
+    } */
+    .partner-logo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .unique-features-box {
+      background-color: transparent !important; /* Make background transparent to remove white box */
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: none !important; /* Remove box shadow */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .unique-features-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .unique-features-box a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .unique-features-icon-box {
+      text-align: center;
+      font-size: 50px;
+      color: #d39153;
+      margin-bottom: 20px;
+    }
+
+    .unique-features-icon-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+    
+    .footer-ca-row{
+      display:none;
+    }
+    
+    @media (max-width: 768px) {
+    .footer-ca-row{
+        order: 3;
+        margin-bottom: 20px !important;
+        font-size: 0.9rem;
+        display:none;
+      }
+      .footer-ca-row{
+        margin-top: 20px !important;
+        display:block;
+      }
+    }
+
+      
+    /* Apply the animation when the element is visible */
+    .partner-logo {
+      /* opacity: 0; */
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .partner-logo.visible {
+      animation: slideIn 0.5s ease-out forwards;
+    }
+    
+    /* Updated CSS for partner logos */
+    .partner-logo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* gap: 20px; */
+      margin-top: 20px;
+    }
+
+    .partner-logo {
+      flex: 1 1 150px; /* Adjusts the base size of the logo box */
+      max-width: 170px; /* Ensures the maximum width for each logo */
+      display: flex;
+      justify-content: center;
+    }
+
+    .partner-logo img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 2px 4px 9px rgba(255, 255, 255, 0.2); /* Subtle glow effect */
+    }
+
+    .partner-logo:hover img {
+      transform: translateY(-5px);
+      box-shadow: 2px 4px 9px rgba(255, 255, 255, 0.4); /* More pronounced glow on hover */
+
+    }
+    body{
+      
+    cursor: pointer !important;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    }
+
+    /* Modal Content (Image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      animation: zoomIn 0.3s ease-in-out;
+      margin: 0 auto;
+      padding: 0 auto;
+    }
+
+    /* Zoom animation */
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 150px;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+  </style>
+  <script>
+    // Get the modal
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.getElementsByClassName("close")[0];
+
+    // Function to enlarge image
+    function enlargeImage(imgElement) {
+      modal.style.display = "block";
+      modalImg.src = imgElement.src;
+    }
+
+    // Close modal when clicking on the close button
+    closeModal.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // Close modal when clicking outside the image
+    modal.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</html>

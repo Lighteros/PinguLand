@@ -1,0 +1,501 @@
+.supply-container {
+  position: relative; /* Enable positioning for the overlay */
+  width: 100%; /* Full width */
+  height: auto; /* Adjust height to the image */
+}
+
+.supply-container img {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  margin-top: 50px;
+}
+
+.overlay-text {
+  position: absolute; /* Overlay on top of the container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover full width */
+  height: 100%; /* Cover full height */
+  display: flex; /* Center text */
+  justify-content: center;
+  align-items: center;
+  color: #780606; /* Text color */
+  font-family: "ridersofthewildwest", sans-serif;
+  text-align: center; /* Center text */
+  padding: 10px; /* Add padding for better spacing */
+  /* background-color: rgba(0, 0, 0, 0.4);  */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Optional shadow */
+  box-sizing: border-box; /* Include padding in dimensions */
+  z-index: 1000; /* Keep it on top */
+  font-size: clamp(1.2rem, 3vw, 6rem); /* Dynamically scale font size */
+  line-height: 1.2; /* Prevent text from overlapping */
+  overflow-wrap: break-word; /* Break long words if necessary */
+}
+.overlay-smaller-text {
+  font-size: clamp(1.5rem, 2.5vw, 3.5rem); /* Dynamically scale font size */
+}
+
+/* For tilted text effect */
+.overlay-tilted-text {
+  transform: rotate(-10deg); /* Tilt the text */
+  text-transform: uppercase; /* Make text uppercase for bold effect */
+}
+
+/* Add dynamic colors using animation */
+.overlay-dynamic-text {
+  animation: color-change 3s infinite; /* Change colors infinitely */
+}
+
+/* Keyframes for dynamic color changes */
+@keyframes color-change2 {
+  0% {
+    color: #9400d3; /* Dark Violet */
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+  25% {
+    color: #8a2be2; /* Blue Violet */
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+  50% {
+    color: #9400d3; /* Neon Magenta */
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+  75% {
+    color: #8a2be2; /* Orchid */
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+  100% {
+    color: #9400d3; /* Return to Dark Violet */
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+}
+
+/* Combine tilted and dynamic styles */
+.overlay-tilted-dynamic-text {
+  transform: rotate(-10deg) !important; /* Tilt the text */
+  animation: color-change 2s infinite; /* Change colors infinitely */
+  text-transform: uppercase; /* Optional: Make text uppercase */
+}
+
+/* Mobile-specific font size (double the size) */
+@media (max-width: 768px) {
+  .overlay-text {
+    font-size: clamp(4rem, 10vw, 16rem); /* Double the scaling */
+  }
+
+  #intro-points {
+    font-family: "Blacknorthdemo", sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    text-transform: none !important; /* Ensures text is displayed as typed */
+    margin-bottom: 0rem;
+  }
+}
+
+ul {
+  list-style-type: disc; /* Other options: circle, square, none */
+  padding-left: 20px; /* Adjust indentation */
+}
+
+li {
+  margin-bottom: 10px; /* Add spacing between items */
+}
+
+/*===============================================================================================================================*/
+/* Base stamping effect */
+.overlay-stamping-text {
+  opacity: 0; /* Initially hidden */
+  transform: scale(0.5) rotate(-20deg); /* Start smaller and tilted */
+  transition: all 0.3s ease-out; /* Smooth transition for entry */
+}
+
+.overlay-stamping-text.active {
+  opacity: 1; /* Fully visible */
+  transform: scale(1) rotate(0deg); /* Normal size and orientation */
+  animation: stamp-effect 0.5s ease-out, color-change 3s infinite; /* Add color-change */
+}
+
+/* Stamp animation */
+@keyframes stamp-effect {
+  0% {
+    transform: scale(1.5) rotate(-10deg); /* Oversized and tilted */
+    opacity: 0.5; /* Semi-transparent */
+  }
+  50% {
+    transform: scale(0.9) rotate(5deg); /* Slightly compressed */
+    opacity: 1; /* Fully visible */
+  }
+  100% {
+    transform: scale(1) rotate(0deg); /* Normal size and orientation */
+  }
+}
+
+/* Dynamic color-change animation */
+@keyframes color-change {
+  0% {
+    color: #b94c0e;
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+  25% {
+    color: #9e3f0c;
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+  50% {
+    color: #b94c0e;
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+  75% {
+    color: #7a2f07;
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+  100% {
+    color: #b94c0e;
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+}
+
+.less-tilted-overlay {
+  transform: rotate(-5deg) !important; /* Tilt the text */
+}
+/*----------------------------------------------------------------------------------------------a*/
+
+/* Gun scope styling */
+#gunScope {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background: url("../images/scope.png") no-repeat center center;
+  background-size: contain;
+  pointer-events: none; /* Allow clicking through the scope */
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Hide the default mouse cursor */
+body {
+  cursor: none;
+}
+
+#ipAddress {
+  position: fixed;
+  bottom: 80px;
+  left: 10px;
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-shadow: 0.5px 0.5x 0.5px rgba(0, 0, 0, 1);
+  animation: color-change 3s infinite; /* Change colors infinitely */
+}
+
+/* Shot counter styling */
+#shotCounter {
+  position: fixed;
+  bottom: 55px;
+  left: 10px;
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-shadow: 0.5px 0.5x 0.5px rgba(0, 0, 0, 1);
+  animation: color-change 3s infinite; /* Change colors infinitely */
+}
+
+/* Global shot counter styling */
+#globalShotCounter {
+  position: fixed;
+  bottom: 30px; /* Slightly above the local counter */
+  left: 10px;
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.1rem;
+  color: #ff6f61; /* Different color to distinguish */
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-shadow: 0.5px 0.5x 0.5px rgba(0, 0, 0, 1);
+  animation: color-change 3s infinite; /* Same animation */
+}
+#topScorerInfo {
+  position: fixed;
+  bottom: 5px; /* Slightly above the local counter */
+  left: 10px;
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.1rem;
+  color: #ff6f61; /* Different color to distinguish */
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-shadow: 0.5px 0.5x 0.5px rgba(0, 0, 0, 1);
+  animation: color-change 3s infinite; /* Same animation */
+}
+
+/* Animation container for shooting effects */
+#shootingAnimationsContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent interaction */
+  z-index: 999;
+}
+
+/* Video styling for shooting animation */
+/* .shooting-animation {
+    position: absolute;
+    width: 150px; 
+    height: 150px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+  }
+   */
+/* 
+  #topScorerInfo {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    z-index: 1000;
+  }
+   */
+#toggleLeaderboard {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#leaderboard {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 80%;
+  max-height: 60%;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+}
+
+#infoContainer {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+/*------------------------------------------------------------------------------------------------*/
+.team-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Black with 50% opacity */
+  z-index: 1; /* Ensures it overlays content inside the team-box */
+  pointer-events: none; /* Prevents the overlay from interfering with pointer events */
+  border-radius: 15px; /* Matches the border-radius of the .team-box */
+}
+
+#character1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Black with 50% opacity */
+  z-index: 1; /* Ensures it overlays content inside the team-box */
+  pointer-events: none; /* Prevents the overlay from interfering with pointer events */
+  border-radius: 15px; /* Matches the border-radius of the .team-box */
+}
+
+/* ------------------*/
+
+.overlay-text-top {
+  top: 35px !important;
+  transform: rotate(0deg) !important; /* Tilt the text */
+  font-size: 2rem !important;
+}
+
+.overlay-text-top-pingunomics {
+  top: 55px !important;
+  transform: rotate(0deg) !important; /* Tilt the text */
+  font-size: 2rem !important;
+}
+.overlay-like-text {
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-shadow: 0.5px 0.5x 0.5px rgba(0, 0, 0, 1);
+  animation: color-change 3s infinite; /* Change colors infinitely */
+}
+
+.detail-box div ul {
+  list-style-position: inside; /* Moves the bullets inside the text flow */
+}
+
+#intro-points {
+  font-family: "Blacknorthdemo", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  text-transform: none !important; /* Ensures text is displayed as typed */
+}
+/* .dead-overlay-text{
+  font-family: 'Plasdrip'!important;
+  font-size: 2.5rem !important;
+  color:#780606 !important;
+
+} */
+
+.overlay-text-mobile {
+  display: none;
+}
+
+.lore-sticker-row {
+  display: none;
+}
+/* For mobile screens: Hide desktop overlay text, show mobile text */
+@media screen and (max-width: 768px) {
+  .lore-sticker-row {
+    display: block;
+  }
+  .mobile-text-break {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  .overlay-text {
+    display: none;
+  }
+
+  .overlay-text-mobile {
+    display: block;
+    font-size: 1.4rem !important;
+    top: 55px !important;
+  }
+  .roadmap-overlay-text {
+    top: 110px !important;
+  }
+  .overlay-text-mobile-characters {
+    display: block;
+    font-size: 1rem !important;
+    top: 40% !important;
+  }
+}
+
+#mobileipAddress1 {
+  position: fixed;
+  bottom: 80px;
+  left: 10px;
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-shadow: 0.5px 0.5x 0.5px rgba(0, 0, 0, 1);
+  animation: color-change 3s infinite; /* Change colors infinitely */
+}
+#mobileShotCounter {
+  position: fixed;
+  bottom: 55px;
+  left: 10px;
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-shadow: 0.5px 0.5x 0.5px rgba(0, 0, 0, 1);
+  animation: color-change 3s infinite; /* Change colors infinitely */
+}
+
+/* Global shot counter styling */
+#mobileGlobalCounter {
+  position: fixed;
+  bottom: 30px; /* Slightly above the local counter */
+  left: 10px;
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.1rem;
+  color: #ff6f61; /* Different color to distinguish */
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-shadow: 0.5px 0.5x 0.5px rgba(0, 0, 0, 1);
+  animation: color-change 3s infinite; /* Same animation */
+}
+#mobileTopScorer {
+  position: fixed;
+  bottom: 5px; /* Slightly above the local counter */
+  left: 10px;
+  font-family: "ridersofthewildwest", sans-serif;
+  font-size: 1.1rem;
+  color: #ff6f61; /* Different color to distinguish */
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-shadow: 0.5px 0.5x 0.5px rgba(0, 0, 0, 1);
+  animation: color-change 3s infinite; /* Same animation */
+}
+
+.disclaimer {
+  font-family: "Blacknorthdemo", sans-serif;
+  font-size: 1.3rem !important;
+}
+
+#roadmap_video,
+.supply_bilboard_compressed {
+  box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 79%), 0 0 30px rgb(20 14 14 / 75%);
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.lore-sticker {
+  order: 2;
+  margin-top: 0px !important;
+}
+
+.lore-sticker-row {
+  order: 2;
+  width: 80vw !important;
+  margin-top: -15px !important;
+}

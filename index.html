@@ -1,0 +1,4101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- Site Metas -->
+    <meta name="keywords" content="PINGU, memecoin, cryptocurrency" />
+    <meta
+      name="description"
+      content="Welcome to PINGU: The Memecoin Revolution!"
+    />
+    <meta name="author" content="Founding Fathers" />
+
+    <title>pingulandcto</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/banner/Sheriff_Pingu_2_compressed.png"
+    />
+    <!-- font awesome css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto Slab"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/fonts/Riders of the Wild West.css"
+    />
+    <style>
+      .new-fill-color {
+        fill: #dee0e0;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #8a4f3a">
+    <div id="background"></div>
+    <!-- Loader animation -->
+    <div id="wrap"></div>
+    <div id="infoContainer1">
+      <div id="ipAddress">IP: <span id="currentIpAddress"></span></div>
+      <div id="shotCounter">Shots Fired: <span id="shotCount">0</span></div>
+      <div id="globalShotCounter">Global Shots: 0</div>
+      <div id="topScorerInfo">Top Shooter: </div>
+    </div>
+    <div id="infoContainerMobile" style="display: none;">
+      <div id="mobileipAddress1">IP: <span id="mobileipAddress"></span></div>
+      <div id="mobileShotCounter">Shots: <span id="mobileShotCount">0</span></div>
+      <div id="mobileGlobalCounter">Global: 0</div>
+      <div id="mobileTopScorer">Top: </div>
+    </div>    
+    <div id="gunScope"></div>
+    <div id="shootingAnimationsContainer"></div>
+
+
+    <!-- <div class="scrolling-banner">
+      <p>
+        <span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please
+          ensure you're visiting
+
+          <u><strong>PINGU.LAND</strong></u
+          >. Verify the contract address is
+          <b>
+            <u
+              id="contract-address"
+              onclick="copyText('00000000000000000000000000000000000000', this)"
+            >
+              00000000000000000000000000000000000000
+             
+            </u> </b
+          >. This project is <strong><u>SOLANA-ONLY</u></strong
+          >. Double-check all details to avoid scams.
+        </span>
+      </p>
+    </div> -->
+    <div id="copy-tooltip" class="tooltip">Copied!</div>
+
+    <div class="button_container">
+      <div class="top_row">
+        <a
+          href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x00000000000000000000000000000000000000"
+          target="_blank"
+          class="buy_pingu_button"
+          >
+          <span class="desktop-text">Buy $PINGU</span>
+          <span class="buy-mobile-text">Buy</span></a
+        >
+      </div>
+      <div class="bottom_row">
+        <!-- <a
+          href="https://www.pingu.land//pingu_web_game_intro.html"
+          target="_blank"
+          class="another_button"
+          >Game</a
+        > -->
+        <a
+          href="/memes"
+          target="_blank"
+          class="another_button"
+          >Memes</a
+        >
+      </div>
+    </div>
+
+    <div class="fixed-social-icons">
+      <!-- Twitter -->
+      <a href="https://x.com/Pinguland_Erc20" target="_blank">
+        <div class="social-icon twitter-icon">
+          <div class="social-icon-bloom"></div>
+          <div class="social-icon-sparkle">
+            <div class="social-icon-sparkle-line"></div>
+            <div class="social-icon-sparkle-line"></div>
+            <div class="social-icon-sparkle-line"></div>
+            <div class="social-icon-sparkle-line"></div>
+            <div class="social-icon-sparkle-line"></div>
+          </div>
+          <svg
+            class="social-icon-shape"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            style="fill: #8a4f3a"
+          >
+            <path
+              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+            ></path>
+          </svg></div
+      ></a>
+
+      <!-- Telegram -->
+      <a href="https://t.me/Pinguland_Erc20" target="_blank">
+        <div class="social-icon telegram-icon">
+          <div class="social-icon-bloom"></div>
+          <div class="social-icon-sparkle">
+            <div class="social-icon-sparkle-line"></div>
+            <div class="social-icon-sparkle-line"></div>
+            <div class="social-icon-sparkle-line"></div>
+            <div class="social-icon-sparkle-line"></div>
+            <div class="social-icon-sparkle-line"></div>
+          </div>
+          <svg
+            class="social-icon-shape"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M446.7 67.1L383.4 437c-5.5 27.4-20.1 34.3-40.8 21.4L275 385.3l-52.9 50.8c-5.8 5.8-10.7 10.7-21.9 10.7l7.9-112.4 204.9-184c8.9-7.9-.7-12.4-13.7-4.4L113 336.1 1.6 301.5c-27.5-8.6-28-27.5 5.7-40.8L415.4 8.5c18.2-6.5 34 4.4 28.7 58.6z"
+            ></path>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+      <video id="mainVideo" autoplay muted loop>
+        <source src="video/Pingo_Intro_compressed.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button id="videoControl" onclick="toggleVideo()">
+        <i class="fas fa-pause"></i>
+      </button>
+      <button id="muteControl" onclick="toggleMute()">
+        <i class="fas fa-volume-mute"></i>
+      </button>
+      <div id="rotatePrompt" style="display: none">
+        <span
+          id="closeRotatePrompt"
+          style="position: absolute; top: 5px; right: 10px; cursor: pointer"
+          >&times;</span
+        >
+        Please rotate your phone to landscape mode for the best viewing
+        experience.
+      </div>
+    </div>
+
+    <div>
+      <!-- Updated slider section -->
+      <section class="slider_section">
+        <div class="heading_container">
+          <h2>Pingu.Land | Lore</h2>
+          <div class="overlay-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top">Sheriff Gone Rogue</div>
+          <div class="overlay-text-mobile overlay-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top">Sheriff Gone Rogue</div>
+        </div>
+        <div class="hero_area active" id="heroArea">
+          <div class="character-box">
+            <div class="mobile-video-box video-box">
+              <video id="welcomeVideo" autoplay loop muted width="100%" height="auto">
+                <source src="video/output_balanced.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="detail-box">
+              
+              <!-- Desktop Text -->
+              <div class="desktop-text supply-container">
+                <!-- <p class="animated fade-in-up"> -->
+                  <ul id="intro-points">
+
+                    <li>Pingu rose from the ashes (CTO) with rich lore, great memes, and unique features.</li>
+                    <li>Then the Sheriff snapped. He went rogue, tearing through the land. Chaos reigned. No one was safe.</li>
+                    <li>The characters are gone. The rules are dead. The land is lawless.</li>
+                    <!-- <li class="overlay-like-text">Sheriff gone rogue.</li> -->
+                  </ul>
+                  <!-- Yeehaw! Pingu.Land has been reborn from the ashes after the
+                  original dev jeeted away with the project. Stepping up to the
+                  challenge, the community led a spirited revival, introducing a
+                  cast of colorful characters and rich lore. With the Wild West
+                  spirit stronger than ever, they've re-imagined and upgraded
+                  Pingu, breathing new life into every corner of Pingu.Land. -->
+                <!-- </p> -->
+                <!-- <div class="overlay-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay">
+                  Sheriff gone rogue
+                </div> -->
+              </div>
+
+              <!-- Mobile Text -->
+              <div class="mobile-text">
+                <ul id="intro-points">
+
+                  <li>Pingu rose (CTO) with rich lore and great memes.</li>
+                  <li>Then the Sheriff snapped. Chaos reigned.</li>
+                  <li>No characters. No rules. Just lawless lands.</li>
+                </ul> 
+              </div>
+              <!-- <h3 style="margin-top: 20px">Pingu CTO - The Evolution</h3> -->
+            <div class="video-box">
+              <video id="welcomeVideo" autoplay loop muted width="100%" height="auto">
+                <source src="video/output_balanced.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+              <div class="row ca-row">
+                <div class="col-12 col-md-8 text-center">
+                  <b>
+                     
+                    <div
+                      id="contract-address"
+                      class="mobile-text-break"
+                      onclick="copyText('00000000000000000000000000000000000000', this)"
+                    >
+                    CA:&nbsp;&nbsp;&nbsp;<u>0x00000000000000000000000000000000000000</u>
+                      <br />
+                  </div>
+                  </b>
+                </div>
+              </div>
+              <!-- <div class="desktop-text supply-container">
+                <p class="animated fade-in-up delay-1s">
+                  Hold onto your hats! Sheriff Pingu is the new law in town, and
+                  he’s making sure it’s all fun and games in Pingu.Land. Armed
+                  with a quick wit and a quicker draw on the meme trigger, he
+                  ensures the laughs never stop. As he patrols the wilds of the
+                  internet, join us on social media to be part of the fun—where
+                  every day brings new adventures and the giggles never end.
+                </p>
+                <div class="overlay-text  overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay">
+                  The devolution
+                </div>
+              </div> -->
+              
+            </div>
+
+            <div class="row lore-sticker-row" style="text-align: center">
+              <img
+                src="/images/pingu_bags.png"
+                alt="Burn-O-Meter"
+                class="center-img lore-sticker"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end slider section -->
+    </div>
+
+    <!-- about section -->
+    <section class="about_section">
+      <div class="heading_container">
+        <h2>Pingu.Land | Supply</h2>
+        <div class="overlay-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top-pingunomics">Held by the brave</div>
+        <div class="overlay-text-mobile overlay-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top">Held by the brave</div>
+      </div>
+      <div class="content_container">
+        <div class="row">
+          <div class="col-md-4 desktop-text" style="text-align: center">
+            <img src="/images/12.png" alt="Burn-O-Meter" class="center-img" />
+          </div>
+          <div class="col-md-4 supply-container">
+            <img
+              src="/images/supply_bilboard_compressed.png"
+              alt="Supply Billboard"
+              class="img-fluid supply_bilboard_compressed"
+            />
+            
+            <!-- <div class="overlay-text overlay-dynamic-text overlay-stamping-text">
+              Hates
+              <br /> Jeets
+              <br />
+              <br />
+              TOO MUCH SUPPLY
+            </div> -->
+          </div>
+          <div class="col-md-4" style="text-align: center">
+            <img
+              src="/images/Gold_Baron_2_compressed.png"
+              alt="Burn-O-Meter"
+              class="center-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end about section -->
+
+    <!-- Roadmap Section -->
+    <section class="roadmap_section layout_padding">
+      <div class="heading_container">
+        <h2>Pingu.Land | Roadmap</h2>
+        <div class="overlay-text overlay-smaller-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top">No map, only destiny</div>
+        <div class="overlay-text-mobile overlay-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top roadmap-overlay-text">No map, only destiny</div>
+      </div>
+      <div class="container-fluid">
+        <div style="text-align: center">
+          
+          <picture>
+            <source
+              srcset="video/Roadmap_150_Percent_compressed.mp4"
+              type="video/mp4"
+              media="(max-width: 768px)"
+            />
+            <source
+              srcset="video/Roadmap_135_Percent_compressed.mp4"
+              type="video/mp4"
+              media="(min-width: 769px)"
+            />
+            <video
+              autoplay
+              muted
+              loop
+              style="width: 65%; border-radius: 15px"
+              id="roadmap_video"
+            >
+              <source
+                src="video/Roadmap_135_Percent_compressed.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </picture>
+          <div class="row">
+            <div class="col-md-4 mobile-text" style="text-align: center">
+              <img src="/images/12.png" alt="Burn-O-Meter" class="center-img" />
+            </div>
+          </div>
+        </div>
+        <!-- <div class="roadmap_container">
+          <div class="roadmap_item">
+            <i class="fas fa-crown"></i>
+            <h3>VIP Parlour</h3>
+            <p class="subtitle">
+              Exclusive Space for Top Holders and Biggest Contributors
+            </p>
+            <p>
+              Step into The VIP Parlour, an exclusive hideaway where legends
+              gather and fortunes are made. Only the top holders and most
+              significant contributors get access to this elite saloon. It's a
+              place to share tall tales, strategize, and enjoy the high life in
+              Pingu.Land.
+            </p>
+            
+            <div class="overlay-text overlay-dynamic-text overlay-stamping-text">IT'S EMPTY</div>
+
+          </div>
+          <div class="roadmap_item">
+            <i class="fas fa-chart-line"></i>
+            <h3>Pingu Tracker Bot</h3>
+            <p class="subtitle">Track your solana assets</p>
+            <p>
+              Keep an eye on your loot with the Pingu Tracker Bot! Get real-time
+              alerts on your Solana treasures and watch your status soar from
+              Tumbleweed to Baron as you stack up $PINGU. The more you hold, the
+              more wallets you can track—because in Pingu.Land, more Pingu means
+              more clout!
+            </p>
+            <div class="overlay-text overlay-dynamic-text overlay-stamping-text">IT'S FAKE</div>
+
+          </div>
+          <div class="roadmap_item">
+            <i class="fas fa-fire"></i>
+            <h3>Pingu Web Game</h3>
+            <p class="subtitle">Ride to Glory!</p>
+            <p>
+              Jump on the bull and hold tight in the Pingu Web Game! Dash
+              through the Wild West, dodging obstacles and aiming for the high
+              score. Can you master the wild ride? Prove your skills and see
+              your scores posted in the main Telegram group for everyone to
+              admire. Saddle up and show you've got what it takes to lead the
+              leaderboard!
+            </p>
+            <div class="overlay-text overlay-dynamic-text overlay-stamping-text">IT'S SHIT</div>
+
+          </div>
+          <div class="roadmap_item">
+            <i class="fas fa-gamepad"></i>
+            <h3>Mobile Game</h3>
+            <p class="subtitle">Saddle Up for a Wild Ride!</p>
+            <p>
+              Get ready for the official Pingu.Land mobile game, coming soon to
+              the Play Store and iOS. Embark on thrilling adventures, take on
+              Billy the Chick and his posse, and protect Pingu.Land from all
+              manner of mischief. Saddle up and dive into the action wherever
+              you go!
+            </p>
+          </div> 
+          <div class="roadmap_item">
+            <i class="fas fa-paint-brush"></i>
+            <h3>NFT Launch</h3>
+            <p class="subtitle">
+              Utility, VIP Access, and Bragging Rights
+            </p>
+            <p>
+              We're launching a special collection of NFTs that unlock
+              utilities, grant VIP access, and bestow bragging rights. Every NFT
+              supports our marketing wallet, fueling the growth and prosperity
+              of Pingu.Land. Secure your digital treasure and show off your
+              status in style.
+            </p>
+          </div> 
+        </div>
+        <div style="text-align: center; margin-top: 10px">
+          <button
+            class="scroll-button left-scroll"
+            onclick="scrollRoadmapLeft()"
+          >
+            &#9664;
+          </button>
+          <button class="scroll-button right-scroll" onclick="scrollRight()">
+            &#9654;
+          </button>
+        </div>
+        <div class="dots-container">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+           <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div> -->
+    </section>
+
+    <section class="moving_images_section">
+      <div class="heading_container" id="moving_images_heading_container">
+        <h2>Pingu.Land | Artwork</h2>
+        <div class="overlay-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top">Strokes of rebellion</div>
+        <div class="overlay-text-mobile overlay-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top">Strokes of rebellion</div>
+
+      </div>
+      <div class="moving-row" id="first_moving_row" style="padding-top: 210px">
+        <div class="moving-container" id="movingContainer1">
+          <img src="/images/banner/banner_1.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_2.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_3.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_4.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_5.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_6.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_7.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_8.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_9.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_10.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_1.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_2.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_3.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_4.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_5.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_6.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_7.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_8.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_9.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_10.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_1.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_2.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_3.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_4.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_5.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_6.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_7.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_8.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_9.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_10.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_1.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_2.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_3.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_4.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_5.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_6.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_7.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_8.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_9.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_10.jpg" loading="lazy" alt="Image 5" />
+        </div>
+      </div>
+      <div class="moving-row reverse">
+        <div class="moving-container" id="movingContainer2">
+          <img src="/images/banner/banner_11.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_12.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_13.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_14.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_15.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_16.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_17.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_18.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_19.jpg" loading="lazy" alt="Image 4" />
+          <!-- <img src="/images/banner/banner_20.jpg" loading="lazy" alt="Image 5" /> -->
+          <img src="/images/banner/banner_11.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_12.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_13.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_14.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_15.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_16.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_17.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_18.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_19.jpg" loading="lazy" alt="Image 4" />
+          <!-- <img src="/images/banner/banner_20.jpg" loading="lazy" alt="Image 5" /> -->
+          <img src="/images/banner/banner_11.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_12.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_13.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_14.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_15.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_16.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_17.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_18.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_19.jpg" loading="lazy" alt="Image 4" />
+          <!-- <img src="/images/banner/banner_20.jpg" loading="lazy" alt="Image 5" /> -->
+          <img src="/images/banner/banner_11.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_12.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_13.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_14.jpg" loading="lazy" alt="Image 4" />
+          <img src="/images/banner/banner_15.jpg" loading="lazy" alt="Image 5" />
+          <img src="/images/banner/banner_16.jpg" loading="lazy" alt="Image 1" />
+          <img src="/images/banner/banner_17.jpg" loading="lazy" alt="Image 2" />
+          <img src="/images/banner/banner_18.jpg" loading="lazy" alt="Image 3" />
+          <img src="/images/banner/banner_19.jpg" loading="lazy" alt="Image 4" />
+          <!-- <img src="/images/banner/banner_20.jpg" loading="lazy" alt="Image 5" /> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- how to buy section -->
+    <!-- <section class="buy_section layout_padding unique-buy-section how_to_buy">
+      <div class="heading_container" id="buy_section_heading_container">
+        <h2>How to Buy PINGU</h2>
+        <div class="overlay-text overlay-smaller-text overlay-tilted-dynamic-text overlay-stamping-text">Sell PINGU</div>
+      </div>
+      <div class="heading_container_p">
+        <p>Follow these simple steps to become part of the PINGU community.</p>
+      </div>
+      <div class="buy_section_container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="unique-box">
+                <div class="top-box unique-top-box">
+                  <div class="icon-box unique-icon-box">
+                    <i class="fas fa-wallet"></i>
+                  </div>
+                  <h5>1. Download a Solana Wallet</h5>
+                </div>
+                <div class="bottom-box unique-bottom-box">
+                  <p>
+                    Choose a Solana wallet such as Phantom or Solflare. These
+                    are available for download from the app store or as Chrome
+                    extensions for desktop users.
+                  </p>
+                  <img
+                    src="/images/how_to_buy_1.png"
+                    alt="Download Wallet Screenshot"
+                    class="unique-screenshot"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="unique-box">
+                <div class="top-box unique-top-box">
+                  <div class="icon-box unique-icon-box">
+                    <i class="fas fa-coins"></i>
+                  </div>
+                  <h5>2. Add Solana</h5>
+                </div>
+                <div class="bottom-box unique-bottom-box">
+                  <p>
+                    Acquire Solana through the Phantom wallet or transfer Solana
+                    to your new wallet from an exchange.
+                  </p>
+                  <img
+                    src="/images/how_to_buy_2.jpg"
+                    alt="Add Solana Screenshot"
+                    class="unique-screenshot"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="unique-box">
+                  <div class="top-box unique-top-box">
+                    <div class="icon-box unique-icon-box">
+                      <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h5>3. Swap SOL for PINGU</h5>
+                  </div>
+                  <div class="bottom-box unique-bottom-box">
+                    <p>
+                      Visit
+                      <a
+                        href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x00000000000000000000000000000000000000"
+                        target="_blank"
+                        >Jupiter</a
+                      >, connect your wallet, and get your $PINGU
+                      <span id="contractToHide" style="font-size: 0.65em"
+                        >(00000000000000000000000000000000000000)</span
+                      >.
+                    </p>
+                    <img
+                      src="/images/how_to_buy_3.png"
+                      alt="Swap SOL for PINGU Screenshot"
+                      class="unique-screenshot"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="unique-box">
+                  <div class="top-box unique-top-box">
+                    <div class="icon-box unique-icon-box">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h5>4. You're All Set</h5>
+                  </div>
+                  <div class="bottom-box unique-bottom-box">
+                    <p>
+                      Your PINGU tokens should now be in your wallet. Welcome to
+                      the $PINGU community!
+                    </p>
+                    <img
+                      src="/images/how_to_buy_4.png"
+                      alt="You are all set Screenshot"
+                      class="unique-screenshot"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- end how to buy section -->
+
+    <!-- end how to buy section -->
+    <!-- <section class="team_section layout_padding2-bottom">
+      <div class="heading_container">
+        <h2> Pingu.Land | Lore
+        </h2>
+        <div class="overlay-text overlay-smaller-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top">Legends fall. Pingu rises.</div>
+        <div class="overlay-text-mobile overlay-text overlay-tilted-dynamic-text overlay-stamping-text less-tilted-overlay overlay-text-top">Pingu rises.</div>
+        
+      </div>
+      <div class="container"></div>
+      <div class="team_container" id="charactersContainer">
+        <div class="team-box team-member" id="character1">
+          <div class="team-content-wrapper">
+            <div class="team-img-box">
+              <img
+                src="/images/s-5.png"
+                loading="lazy"
+                alt=""
+                class="team-img"
+              />
+              <div class="overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top">ROGUE</div>
+              <div class=" overlay-text-mobile-characters overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top">ROGUE</div>
+            </div>
+            <div class="team-img-text">Sheriff Pingu</div>
+            <div class="team-more-info">
+              <h5>Sheriff Pingu</h5>
+              <p>
+                In the turbulent times of Pingu Land's Wild West, a beacon of
+                hope emerged in the form of Sheriff Pingu. Appointed by the
+                founding fathers during a community takeover, Sheriff Pingu was
+                chosen to restore law and order after Billy the Chick and his
+                posse had seized control of the town.
+              </p>
+              <p>
+                Before his arrival in Pingu Land, Sheriff Pingu had already
+                earned a reputation as a dependable defender of justice. Born
+                and raised in the icy expanses of the southern frontier, he
+                honed his skills in the harshest conditions, learning the values
+                of resilience and integrity. Pingu's early years were marked by
+                countless acts of bravery, from rescuing stranded travellers to
+                mediating disputes in neighbouring settlements. He also became a
+                renowned rodeo champion, known for his bull riding prowess,
+                further solidifying his reputation as a fearless and skilled
+                lawman.
+              </p>
+              <p>
+                When news of Pingu Land's plight reached him, the founding
+                fathers, recognizing his impeccable track record and unwavering
+                moral compass, appointed him as the town's new sheriff. His
+                mission: to bring peace to Pingu Land and put an end to Billy
+                the Chick's reign of terror. Sheriff Pingu's arrival was marked
+                by swift and decisive actions, rallying the townsfolk and
+                fortifying defences to stand against Billy's gang.
+              </p>
+              <p>
+                Determined to keep Billy and his posse behind bars—this time for
+                good—Sheriff Pingu's presence in the town has been a
+                game-changer. His blend of courage, intelligence, and compassion
+                makes him a beloved figure and a symbol of justice. Under his
+                watchful eye, Pingu Land is slowly but surely reclaiming its
+                peace and prosperity, with Sheriff Pingu leading the charge
+                against lawlessness.
+              </p>
+            </div>
+            <div class="team-plus-icon">+</div>
+            <div class="team-close-icon">&times;</div>
+          </div>
+        </div>
+        <div class="team-box team-member" id="character2">
+          <div class="team-content-wrapper">
+            <div class="team-img-box">
+              <img
+                src="/images/s-1.png"
+                loading="lazy"
+                alt=""
+                class="team-img"
+              />
+            </div>
+            <div class="team-img-text">Billy The Chic</div>
+            <div class="overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top dead-overlay-text">DEAD</div>
+            <div class=" overlay-text-mobile-characters overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top">DEAD</div>
+            <div class="team-more-info">
+              <h5>Billy The Chic</h5>
+              <p>
+                In the rugged expanse of Pingu Land's Wild West, no name strikes
+                fear into the hearts of townsfolk quite like Billy the Chick. A
+                ruthless outlaw with a notorious reputation, Billy leads his
+                posse on a spree of lawlessness and chaos, always staying one
+                step ahead of the law. His infamy skyrocketed after a daring
+                jailbreak, cementing his status as a fugitive with a hefty
+                bounty on his head.
+              </p>
+              <p>
+                Known as the fastest gun in the Cowboy Frontier, Billy never
+                loses a draw. His sharpshooting skills are unmatched, and his
+                cold, calculating nature makes him a formidable opponent. Billy
+                is also known to have never lost a poker game—he either leaves
+                with the pot or leaves you with empty pockets.
+              </p>
+              <p>
+                Billy and his gang are infamous for looting banks, staging train
+                heists, and holding up stagecoaches. Their reign of terror
+                extends to rustling cattle and raiding supply caravans. Each
+                crime leaves a trail of chaos and fear, as Billy's cunning plans
+                always keep him just out of reach of the law. The townspeople
+                dread his name, and his legacy as a symbol of defiance and
+                lawlessness remains etched in the annals of Pingu Land's
+                history.
+              </p>
+            </div>
+            <div class="team-plus-icon">+</div>
+            <div class="team-close-icon">&times;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team_container" id="teamContainer">
+        <div class="team-box team-member" id="teamMember1">
+          <div class="team-content-wrapper">
+            <div class="team-img-box">
+              <img
+                src="/images/t-1.jpeg"
+                loading="lazy"
+                alt=""
+                class="team-img"
+              />
+              <div class="overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top dead-overlay-text">DEAD</div>
+              <div class=" overlay-text-mobile-characters overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top">DEAD</div>
+            </div>
+            <div class="team-img-text">
+              The Gold Baron
+            </div>
+            <div class="team-more-info">
+              <h5>
+                The Gold Baron
+              </h5>
+              <p>Leading the charge and ensuring the prosperity of our town.</p>
+              <p>
+                In the heart of Pingu Land's Wild West, the Gold Baron, known
+                simply as Baron, emerged as a powerful and enigmatic figure.
+                Arriving with nothing but a gleam in his eye, he quickly amassed
+                wealth from an ancient gold mine, funding the town's growth with
+                iconic buildings and grand festivals.
+              </p>
+              <p>
+                But Baron's rise was no mere stroke of luck. Behind his
+                benevolent facade lay deep ties to the Pingu-nostra, Pingu
+                Land's infamous crime family. As a revered mob boss, Baron
+                orchestrated his plans with the precision and authority of a
+                true Don. When he discovered the ancient gold mine, he made its
+                previous owner an offer he couldn’t refuse, securing his fortune
+                and solidifying his power.
+              </p>
+              <p>
+                Baron navigates the complexities of power with unmatched
+                cunning. Rivals who dare to challenge him find themselves
+                "sleeping with the fishes," while allies enjoy prosperity under
+                his protection. His influence extends through secretive meetings
+                and whispered deals, ensuring his wealth and control grow
+                unchallenged.
+              </p>
+              <p>
+                Loved by the townspeople for the prosperity he brings, Baron
+                remains a hero to those who stay on his good side. Despite
+                whispers of rivalry and rebellion, his dignified yet iron-fisted
+                control of Pingu Land endures. His legacy, a blend of
+                benevolence and authority, continues to shape Pingu Land, where
+                the legend of the Gold Baron thrives, forever etched in the gold
+                that built the town.
+              </p>
+            </div>
+            <div class="team-plus-icon">+</div>
+            <div class="team-close-icon">&times;</div>
+          </div>
+        </div>
+        <div class="team-box team-member" id="teamMember2">
+          <div class="team-content-wrapper">
+            <div class="team-img-box">
+              <img
+                src="/images/t-2.png"
+                loading="lazy"
+                alt=""
+                class="team-img"
+              />
+              <div class="overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top dead-overlay-text">DEAD</div>
+              <div class=" overlay-text-mobile-characters overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top">DEAD</div>
+            </div>
+            <div class="team-img-text">
+              The Blacksmith
+            </div>
+            <div class="team-more-info">
+              <p>
+                Crafting the structures of our town with skill and grit,
+                ensuring everything runs smoothly.
+              </p>
+              <p>
+                In the bustling heart of Pingu Land, amidst the clang of hammers
+                and the glow of forges, lives the Blacksmith, a genius craftsman
+                renowned for his unparalleled skill and innovation. Though
+                socially awkward, his friendly demeanor endears him to the
+                townspeople.
+              </p>
+              <p>
+                Arriving with little more than a few tools and a head full of
+                ideas, the Blacksmith's workshop quickly became the hub of
+                remarkable inventions. His creations, from intricate mechanisms
+                to sturdy structures, transformed Pingu Land and earned him a
+                reputation as a master of innovation.
+              </p>
+              <p>
+                Preferring the company of his creations, he finds solace in the
+                rhythmic pounding of his hammer. Yet, those who know him
+                discover a kind and loyal friend, always willing to help. The
+                Blacksmith's work is instrumental in Pingu Land's growth,
+                crafting iconic buildings, fortified defenses, and delicate art.
+              </p>
+              <p>
+                Revered for his genius and kindness, the Blacksmith's
+                contributions make Pingu Land a prosperous community. His legacy
+                of innovation and extraordinary talent thrives in every corner
+                of the town, where the clang of his hammer and the glow of his
+                forge continue to shape the future of Pingu Land.
+              </p>
+            </div>
+            <div class="team-plus-icon">+</div>
+            <div class="team-close-icon">&times;</div>
+          </div>
+        </div>
+        <div class="team-box team-member" id="teamMember3">
+          <div class="team-content-wrapper">
+            <div class="team-img-box">
+              <img
+                src="/images/t-3.png"
+                loading="lazy"
+                alt=""
+                class="team-img"
+              />
+              <div class="overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top dead-overlay-text">DEAD</div>
+              <div class=" overlay-text-mobile-characters overlay-text overlay-dynamic-text overlay-stamping-text overlay-text-top">DEAD</div>
+            </div>
+            <div class="team-img-text">
+              The Brewmaster
+            </div>
+            <div class="team-more-info">
+              <h5>
+                The Brewmaster
+              </h5>
+              <p>
+                Brewing up unique experiences and keeping the community lively
+                and engaged.
+              </p>
+              <p>
+                In the lively heart of Pingu Land, the Brewmaster stands out as
+                a charismatic figure, loved by everyone. Well-dressed and always
+                ready with a friendly smile, he is the life of every gathering.
+              </p>
+              <p>
+                The Brewmaster's reputation is built on his unparalleled brew,
+                the best in all of Pingu Land. Patrons from far and wide flock
+                to The Cowboy Saloon to taste his creations, each one more
+                delightful than the last. Yet, despite many attempts to uncover
+                his secret, nobody knows the formula behind his legendary brew.
+              </p>
+              <p>
+                With an air of mystery and charm, The Cowboy Saloon has become
+                the town's favorite spot, a place where stories are shared, and
+                friendships are forged. His ability to bring people together and
+                his exceptional brewing skills make him a beloved and iconic
+                figure in Pingu Land.
+              </p>
+              <p>
+                The legend of the Brewmaster endures, a testament to his charm,
+                skill, and the unforgettable taste of his secret brew. His
+                legacy lives on in the hearts of the townspeople, where his
+                spirit of camaraderie and excellence continues to thrive.
+              </p>
+            </div>
+          </div>
+          <div class="team-plus-icon">+</div>
+          <div class="team-close-icon">&times;</div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- end service section -->
+    <footer class="footer_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"></div>
+          <div class="col-md-6 text-right">
+            <h4>@PingulandOwn</h4>
+            <div class="footer_social_icons">
+              <a href="https://t.me/Pinguland_Erc20" target="_blank"
+                ><i class="fab fa-telegram-plane"></i
+              ></a>
+              <a href="https://x.com/Pinguland_Erc20" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="partner-logo-container">
+                <div class="box unique-features-box partner-logo">
+                  <a
+                    href="https://dexscreener.com/ethereum/0x00000000000000000000000000000000000000"
+                    target="_blank"
+                  >
+                    <div class="icon-box unique-features-icon-box">
+                      <img
+                        src="/images/icons/dexscreener.png"
+                        alt="Dexscreener Icon"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="box unique-features-box partner-logo">
+                  <a
+                    href="https://www.dextools.io/app/en/ether/pool-explorer/0x00000000000000000000000000000000000000"
+                    target="_blank"
+                  >
+                    <div class="icon-box unique-features-icon-box">
+                      <img
+                        src="/images/icons/dextools.png"
+                        alt="Dextools Icon"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="row footer-ca-row">
+                <div class="col-12 col-md-8 text-center">
+                  <b>
+                     
+                    <div
+                      id="contract-address"
+                      class="mobile-text-break"
+                      onclick="copyText('00000000000000000000000000000000000000', this)"
+                    >
+                    CA:&nbsp;&nbsp;&nbsp;<u>0x00000000000000000000000000000000000000</u>
+                      <br />
+                  </div>
+                  </b>
+                </div>
+              </div>
+        <div class="row">
+          <div class="col-12 text-center" style="margin-bottom: 50px">
+            <!-- <p>&copy; 2024 Pingu.Land</p> -->
+            <p class="disclaimer">
+              <strong>DISCLAIMER:</strong> <br />
+              $PINGU is lawless and has no value. Prices may rise, fall, or vanish. Don't risk what you can't afford to lose. Saddle up, partner—it's a wild ride.
+            </p>
+            <!-- <p>
+              Our digital video content was expertly crafted by
+              <strong>ManyMoons Studios.</strong> -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- end team section -->
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three./js/r128/three.min.js"></script>
+    <script src="https://www.gstatic.com/firebase/js/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebase/js/8.10.0/firebase-database.js"></script>
+
+    <script type="text/javascript" src="/js/custom_v1.js"></script>
+  </body>
+  <style>
+    /* Add Slide up effect on Hero Area --------------------------------------------------------- */
+    #heroArea {
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+
+    #heroArea.active {
+      transform: translateY(30px);
+      opacity: 1;
+    }
+
+    /* Following is for the rotate prompt for Mobile users in Portrait mode -----------------------*/
+    #rotatePrompt {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-align: center;
+      z-index: 9999;
+    }
+
+    #closeRotatePrompt {
+      font-size: 18px;
+      color: white;
+    }
+
+    #closeRotatePrompt:hover {
+      color: red;
+    }
+
+    /* Image scroll effect ----------------------------------------------------------- */
+    .img-box {
+      transition: transform 1s ease, opacity 1s ease;
+    }
+    .img-box.hidden {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    .img-box.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    #hero_area {
+      background: linear-gradient(to bottom right, #975527, #401b08);
+      background-size: cover;
+    }
+
+    .service_container {
+      background: url("/images/recycle-wrinkled-paper-texture.png") no-repeat
+        center center;
+      background-size: cover;
+      padding: 150px 0;
+      padding-top: 250px;
+    }
+
+    .moving_images_section {
+      background: black;
+      background-size: cover;
+    }
+
+    .team_section {
+      background: url("/images/bg_18.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    .roadmap_section {
+      background: url("/images/bg_10.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    /* .video-section, */
+    .hero_area,
+       .about_section,
+       .service_section,
+       .moving_images_section,
+       .roadmap_section,
+       .team_section
+       /* .footer_section { */ {
+      position: relative;
+      z-index: 1;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Background styling for the buy section */
+    .buy_section_container {
+      background: url("/images/starting_landscape.png") no-repeat center center;
+      background-size: cover;
+      position: relative;
+      padding-top: 170px;
+      padding-bottom: 60px;
+    }
+
+    /* Ensuring boxes are displayed two at a time for desktop */
+    .unique-detail-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .unique-detail-container .col-md-6 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .unique-box {
+      background-color: white;
+      margin: 10px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: linear-gradient(
+        to bottom right,
+        rgba(236, 204, 153, 0.9),
+        rgba(64, 27, 8, 0.9)
+      );
+    }
+
+    .unique-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .unique-icon-box {
+      text-align: center;
+      font-size: 50px;
+      color: #8f5b34;
+      margin-bottom: 20px;
+    }
+
+    .unique-top-box h5 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .unique-bottom-box p {
+      text-align: center;
+      color: #dee0e0;
+    }
+
+    .unique-screenshot {
+      display: block;
+      margin: 10px auto;
+      width: 100%;
+      max-width: 300px; /* Restrict the size */
+      border-radius: 10px;
+    }
+  </style>
+  <style>
+    /* CSS rules to apply the fonts */
+    h1,
+    h2,
+    h5 {
+      font-family: "Blacknorthdemo";
+    }
+
+    body,
+    p {
+      font-family: "Roboto Slab";
+    }
+  </style>
+  <style>
+    #pingu_teacher {
+      float: right;
+      width: 100%;
+      max-width: 300px;
+    }
+  </style>
+  <style>
+    /* Additional CSS for the about section image */
+    #pingu_teacher img {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 20px;
+      margin-right: 40px;
+    }
+    /* Following code for the banner with repeated $PINGU  ---------------------------------------------------------*/
+    .scrolling-banner {
+      width: 100%;
+      background-color: #dee0e0;
+      color: #291916;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      font-size: 24px;
+      display: flex;
+      align-items: center; /* Vertically center the text */
+      height: 50px; /* Set a height for the banner */
+    }
+
+    .scrolling-banner p {
+      display: inline-block;
+      animation: scroll-left 30s linear infinite; /* Slowed down the scroll speed */
+      margin: 0;
+      white-space: nowrap;
+      /* font-weight: bold; */
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .scrolling-banner span {
+      margin: 0 20px;
+    }
+  </style>
+  <style>
+    .hero_area,
+    .about_section,
+    .service_section,
+    .moving_images_section,
+    .buy_section,
+    .team_section {
+      position: relative;
+      z-index: 1;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .video-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-section #rotatePrompt {
+      display: block;
+    }
+  </style>
+  <style>
+    /* Following is for the Buy Button in the video section ----------------------------------------------------- */
+    .video_section {
+      position: relative;
+    }
+
+    /* .buy_pingu_button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.5rem 2rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid #fff;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      overflow: hidden;
+      transition: background-color 0.3s ease-out, color 0.3s ease-out;
+      z-index: 9999;
+    }
+
+    .buy_pingu_button::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: width 1s ease, height 1s ease, top 1s ease, left 1s ease;
+      transform: translate(-50%, -50%);
+    }
+
+    .buy_pingu_button:hover {
+      background-color: #291916;
+    }
+
+    .buy_pingu_button:hover::before {
+      width: 8rem;
+      height: 8rem;
+      top: 50%;
+      left: 50%;
+    } */
+    .button_container {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.3rem;
+      z-index: 9999;
+    }
+
+    @media (max-width: 768px) {
+      /* Mobile adjustments */
+      .button_container {
+        flex-direction: column; /* Stack rows vertically */
+        align-items: center;
+        gap: 0.5rem;
+        left: 80%;
+      }
+
+      /* Top row for Buy button */
+      .top_row {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      /* Bottom row with Game and Memes side by side */
+      .bottom_row {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* Ensure Buy button takes full width on mobile */
+      .buy_pingu_button {
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Make Game and Memes buttons share space in the bottom row */
+      .another_button {
+        flex: 1;
+        text-align: center;
+      }
+    }
+
+    /* Button styling */
+    .buy_pingu_button,
+    .another_button {
+      position: relative;
+      padding: 0.5rem 2rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid #fff;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      overflow: hidden;
+      transition: background-color 0.3s ease-out, color 0.3s ease-out;
+      min-width: 120px;
+    }
+
+    .buy_pingu_button::before,
+    .another_button::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: width 1s ease, height 1s ease, top 1s ease, left 1s ease;
+      transform: translate(-50%, -50%);
+    }
+
+    .buy_pingu_button:hover,
+    .another_button:hover {
+      background-color: #291916;
+    }
+
+    .buy_pingu_button:hover::before,
+    .another_button:hover::before {
+      width: 8rem;
+      height: 8rem;
+      top: 50%;
+      left: 50%;
+    }
+  </style>
+
+  <style>
+    /* Following is for About section */
+    @media (max-width: 768px) {
+      .about_section .row {
+        flex-direction: column;
+      }
+
+      .about_section .img-box {
+        margin: 0 auto 20px;
+      }
+
+      .about_section .detail-box {
+        text-align: center;
+      }
+      #pingu_teacher {
+        display: none;
+      }
+    }
+    /* Add these lines to make the team section look better on mobile devices */
+    @media (max-width: 768px) {
+      .team_container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .team-box {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .team-box.active {
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .team-box.active .team-img-box {
+        width: 100%;
+        padding-right: 0;
+      }
+
+      .team-box.active .team-more-info {
+        width: 100%;
+        padding-top: 20px;
+      }
+
+      .team-box.active .team-close-icon {
+        top: 20px;
+        right: 20px;
+      }
+
+      .team-box.active .team-img {
+        width: 100%;
+        height: auto;
+      }
+
+      .team-plus-icon,
+      .team-close-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        line-height: 40px;
+      }
+    }
+
+    /* Add this CSS to change the text color in the Pingu-nomics section to white */
+    .about_section .detail-box {
+      color: white;
+    }
+  </style>
+  <style>
+    /* Following is to add box around the detail box */
+    .detail_box {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+    }
+
+    /* Media query for larger screens */
+    @media (min-width: 1200px) {
+      .slider_section .container .row .detail_box {
+        width: 140% !important;
+      }
+      .character-box {
+        max-width: 140% !important; /* Increase the width for larger screens */
+      }
+    }
+
+    /* Style for the PINGU-NOMICS main heading */
+    .heading_container h2 {
+      text-align: center !important;
+      margin-bottom: 40px !important;
+      margin-top: 30px !important;
+      align-self: center !important;
+    }
+
+    /* Style for the PINGU-NOMICS boxes */
+    #supply-box,
+    #burning-box {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+      margin: 20px 40px !important;
+      text-align: center; /* Ensure text is aligned to the left */
+    }
+
+    /* Center the image */
+    .center-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .center-img {
+        margin-top: 40px;    width: 90%;
+
+      }
+    }
+
+    /* Media query for larger screens to increase the width */
+    @media (min-width: 1200px) {
+      #supply-box,
+      #burning-box {
+        max-width: 100%;
+        margin: auto;
+      }
+    }
+  </style>
+  <style>
+    /* Footer styles */
+    /* Footer styles */
+    .footer_section {
+      background-color: #000;
+      /* background: linear-gradient(
+        to bottom right,
+        rgba(218, 157, 128),
+        rgba(194, 77, 0)
+      ); */
+
+      padding: 20px 0;
+      color: #fff;
+    }
+
+    .footer_section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer_section .buy_button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 10px 20px;
+      border: 2px solid #000;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .footer_section .buy_button:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #fff;
+    }
+
+    .footer_section h4 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      /* font-weight: bold; */
+    }
+
+    .footer_section .footer_social_icons a {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .footer_section .footer_social_icons a:hover {
+      color: #d39153;
+    }
+
+    .footer_section .disclaimer {
+      margin-top: 10px;
+      font-size: 0.875rem;
+      color: #ccc;
+    }
+
+    .footer_section p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      .footer_section .buy_button {
+        display: block;
+        margin: 20px auto; /* Center the button with margin */
+      }
+
+      .footer_section h4,
+      .footer_section .footer_social_icons {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 1300px) {
+      .footer_section .container {
+        padding-right: 55px; /* Add padding to prevent content cut-off */
+      }
+    }
+  </style>
+  <style>
+    .team-box.active:hover {
+      transform: translate(-50%, -50%) !important; /* Disable hover transform */
+    }
+
+    .team-box.active .team-img-text {
+      display: none;
+    }
+  </style>
+  <style>
+    /* Roadmap Section */
+    .roadmap_section {
+      padding: 50px 0;
+      background-color: #f8f9fa;
+    }
+
+    .roadmap_section .heading_container h2 {
+      color: #fff;
+      font-family: "Blacknorthdemo";
+    }
+
+    .roadmap_container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-top: 100px;
+    }
+
+    .roadmap_item {
+      flex: 0 0 auto;
+      width: 250px; /* Adjust the width as necessary */
+      margin-right: 10px;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 20px 30px;
+      border-radius: 15px;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .roadmap_item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hide the scroll bar while allowing scrolling */
+    .roadmap_container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .roadmap_container {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .roadmap_item h3 {
+      margin-bottom: 10px;
+      font-family: "Blacknorthdemo";
+    }
+
+    .roadmap_item .subtitle {
+      margin-bottom: 10px;
+      font-family: "Roboto Slab";
+      font-weight: bold;
+    }
+
+    .roadmap_item p {
+      font-family: "Roboto Slab";
+    }
+
+    @media (min-width: 768px) {
+      .roadmap_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
+      .roadmap_item {
+        width: 48%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .roadmap_item {
+        width: 30%;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const roadmapItems = document.querySelectorAll(".roadmap_item");
+
+      function checkVisibility() {
+        roadmapItems.forEach((item) => {
+          const rect = item.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            item.classList.add("visible");
+          } else {
+            item.classList.remove("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", checkVisibility);
+      window.addEventListener("resize", checkVisibility);
+      checkVisibility();
+    });
+  </script>
+  <script>
+    // JavaScript to handle scroll events and trigger animations
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedElements = document.querySelectorAll(".animated");
+
+      const observerOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px",
+        threshold: 0.1, // Trigger when 10% of the element is visible
+      };
+
+      function handleIntersection(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            // Re-trigger the animation
+            entry.target.style.animation = "none";
+            entry.target.offsetHeight; // Trigger reflow
+            entry.target.style.animation = null;
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(
+        handleIntersection,
+        observerOptions
+      );
+
+      animatedElements.forEach((element) => {
+        observer.observe(element);
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const headings = document.querySelectorAll(".heading_container");
+
+      function checkVisibility() {
+        headings.forEach((heading) => {
+          const rect = heading.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            heading.classList.add("visible");
+          } else {
+            heading.classList.remove("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", checkVisibility);
+      window.addEventListener("resize", checkVisibility);
+      checkVisibility();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const partnerLogos = document.querySelectorAll(".partner-logo");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1, // Trigger when 10% of the element is visible
+      };
+
+      function handleIntersection(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(
+        handleIntersection,
+        observerOptions
+      );
+
+      partnerLogos.forEach((logo) => {
+        observer.observe(logo);
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const roadmapItems = document.querySelectorAll(".roadmap_item");
+
+      function checkVisibility() {
+        roadmapItems.forEach((item) => {
+          const rect = item.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            item.classList.add("visible");
+          } else {
+            item.classList.remove("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", checkVisibility);
+      window.addEventListener("resize", checkVisibility);
+      checkVisibility();
+    });
+  </script>
+  <script>
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   const buySection = document.querySelector(".how_to_buy");
+
+    //   function checkVisibility() {
+    //     const rect = buySection.getBoundingClientRect();
+    //     if (rect.top < window.innerHeight && rect.bottom > 0) {
+    //       buySection.classList.add("visible");
+    //     } else {
+    //       buySection.classList.remove("visible");
+    //     }
+    //   }
+
+    //   window.addEventListener("scroll", checkVisibility);
+    //   window.addEventListener("resize", checkVisibility);
+    //   checkVisibility();
+    // });
+  </script>
+  <!-- <script>
+    function scrollRight() {
+      const container = document.querySelector(".roadmap_container");
+      container.scrollBy({ left: 280, behavior: "smooth" });
+    }
+    function scrollRoadmapLeft() {
+      const container = document.querySelector(".roadmap_container");
+      container.scrollBy({ left: -280, behavior: "smooth" });
+    }
+  </script> -->
+  <style>
+    .roadmap_item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .roadmap_item.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .roadmap_item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <style>
+    .about_section .heading_container,
+    .service_section .heading_container,
+    .roadmap_section .heading_container {
+      padding-top: 65px;
+      color: #fff; /* Text color */
+      text-align: center; /* Center the text */
+      margin-bottom: 40px; /* Space below the heading */
+    }
+
+    .service_section .heading_container,
+    .roadmap_section .heading_container {
+      padding-top: 25px !important;
+    }
+
+    .about_section .heading_container h2,
+    .service_section .heading_container h2,
+    .roadmap_section .heading_container h2 {
+      color: #fff; /* Text color */
+      font-family: "Blacknorthdemo"; /* Font family */
+    }
+  </style>
+  <style>
+    .heading_container {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 1);
+      color: #fff;
+      padding: 10px 0;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .heading_container h2 {
+      transform: translateX(-100px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .slider_section,
+    .about_section .content_container {
+      position: relative;
+      padding-top: 60px; /* Adjust padding as needed */
+    }
+
+    .about_section .content_container {
+      background: url("/images/bg_15.png") no-repeat center center; /* Set the background for the content */
+      background-size: cover;
+      top: 180px;
+    }
+
+    .roadmap_section {
+      padding: 50px 0;
+      top: 180px;
+    }
+
+    .team_section {
+      padding: 60px 0;
+    }
+
+    /* Remove individual background styles */
+    .img-box,
+    .detail-box {
+      background: none;
+      padding: 0;
+    }
+
+    /* Combine the backgrounds into one */
+    .slider_section .custom-container .custom-row {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 80%;
+      margin: auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 20px; /* Adjust this value to start the box later */
+    }
+
+    /* Adjust the image box and text box */
+    .img-box {
+      max-width: 40%;
+      margin-right: 20px;
+    }
+
+    .img-box img {
+      border-radius: 20px;
+    }
+
+    .detail-box {
+      max-width: 100%;
+      color: #ffffff; /* Ensure text is white for better contrast */
+    }
+
+    /* Ensure higher specificity to override Bootstrap */
+    .custom-carousel
+      .carousel-inner
+      .carousel-item.active
+      .custom-container
+      .custom-row {
+      background: rgba(0, 0, 0, 0.75) !important;
+      padding: 40px !important;
+      border-radius: 20px !important;
+      max-width: 80% !important;
+      margin: auto !important;
+      position: relative !important;
+      display: flex !important;
+      align-items: center !important;
+      margin-top: 50px !important;
+      box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+      padding: 30px;
+    }
+
+    .custom-container,
+    .custom-row {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Ensure higher specificity to override Bootstrap */
+    .custom-carousel
+      .carousel-inner
+      .carousel-item.active
+      .custom-container
+      .custom-row.character-box {
+      background: url("/images/border-1.png") no-repeat center center,
+        rgba(0, 0, 0, 0.75) !important;
+      background-size: 100% 100% !important; /* Ensure the background image covers the entire area */
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 80%;
+      margin: auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
+      /* border: 3px solid #fff; */
+      box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+      /* border: 2px solid #d4af37; */
+      padding: 30px; /* Adjust the padding to fit the new border */
+    }
+
+    /* Adjust inner detail box */
+    .detail-box {
+      background: none;
+      padding: 0;
+    }
+
+    .slider_section .custom-container .custom-row {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 80%;
+      margin: auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 20px; /* Adjust this value to start the box later */
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .character-box {
+        flex-direction: column;
+        max-width: 90%;
+      }
+
+      .img-box {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .detail-box {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .character-box {
+        padding: 20px;
+        margin-top: 30px;
+      }
+
+      .detail-box {
+        padding: 10px;
+      }
+    }
+
+    #moving_images_heading_container {
+      padding: 30px 0 !important;
+    }
+
+    @media (max-width: 480px) {
+      .character-box {
+        padding: 10px;
+        margin-top: 20px !important;
+      }
+
+      .img-box {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .detail-box {
+        padding: 5px;
+        margin-top: 0px !important;
+      }
+    }
+
+    /* Ensure overlay-container covers the entire section */
+    .overlay-container {
+      position: relative;
+    }
+
+    .overlay-container .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: black;
+      opacity: 0.5; /* Adjust opacity as needed */
+      pointer-events: none; /* Ensure the overlay doesn't block interactions */
+    }
+
+    .overlay-container .content {
+      position: relative;
+      z-index: 1; /* Ensure content is above the overlay */
+    }
+  </style>
+  <style>
+    /* Add this CSS for animations */
+    .animated {
+      opacity: 0;
+      animation-duration: 0.4s;
+      animation-fill-mode: forwards;
+    }
+
+    .fade-in-up {
+      animation-name: fadeInUp;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+      }
+      to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+
+    /* Delay classes */
+    .delay-1s {
+      animation-delay: 0ms;
+    }
+
+    .delay-2s {
+      animation-delay: 1.5s;
+    }
+
+    .delay-3s {
+      animation-delay: 2s;
+    }
+  </style>
+  <style>
+    /* Following are for Roadmap */
+    .roadmap_item {
+      background: linear-gradient(135deg, #3d2c1d, #704321);
+      padding: 20px 30px;
+      border-radius: 15px;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .roadmap_item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .roadmap_item h3 {
+      margin-bottom: 10px;
+      font-family: "Blacknorthdemo";
+    }
+
+    .roadmap_item .subtitle {
+      margin-bottom: 10px;
+      font-family: "Roboto Slab";
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+    }
+
+    .roadmap_item .subtitle i {
+      margin-top: 8px;
+      color: #d4af37;
+      font-size: 1.2em;
+    }
+
+    .roadmap_item i:first-child {
+      font-size: 2.5em;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .roadmap_item p:last-child {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .roadmap_item p:last-child.visible {
+      display: block;
+      opacity: 1;
+    }
+
+    @media (min-width: 768px) {
+      .roadmap_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
+      .roadmap_item {
+        width: 48%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .roadmap_item {
+        width: 30%;
+      }
+    }
+
+    .heading_container.visible h2 {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+  <style>
+    /* Adjust the roadmap item size and behavior on hover/click */
+    .roadmap_item {
+      width: 20%; /* Increase width */
+      height: 650px; /* Slightly larger box size */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden; /* Hide overflowing content */
+      text-align: center;
+      background: linear-gradient(
+        to bottom right,
+        rgba(218, 157, 128, 0.8),
+        rgba(194, 77, 0, 0.8)
+      );
+      /* margin: 20px auto;  */
+      border-radius: 10px; /* Rounded corners */
+      padding: 20px; /* Add some padding */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    }
+
+    .roadmap_item i:first-child {
+      font-size: 2.5em;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .roadmap_item h3 {
+      margin: 10px 0;
+      font-family: "Blacknorthdemo";
+      font-size: 1.5em;
+      color: #fff;
+    }
+
+    .roadmap_item .subtitle {
+      margin: 10px 0;
+      color: #fff;
+      font-size: 1.1em;
+    }
+
+    .roadmap_item p:last-child {
+      display: none;
+      opacity: 0;
+      background: rgba(0, 0, 0, 0.2); /* Different background color */
+      color: #fff;
+      padding: 10px;
+      transition: opacity 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .roadmap_item:hover p:last-child,
+    .roadmap_item:focus p:last-child,
+    .roadmap_item:active p:last-child {
+      display: block;
+      opacity: 1;
+    }
+
+    .roadmap_item:hover .subtitle,
+    .roadmap_item:focus .subtitle,
+    .roadmap_item:active .subtitle {
+      display: none;
+    }
+
+    /* Ensure the title is always visible */
+    .roadmap_item h3 {
+      position: relative;
+      z-index: 2; /* Ensure it is above the description text */
+    }
+
+    .roadmap_item .subtitle {
+      position: relative;
+      z-index: 2; /* Ensure it is above the description text */
+    }
+
+    .roadmap_item p:last-child.visible {
+      display: block;
+      opacity: 1;
+      z-index: 1; /* Ensure it is below the title and subtitle */
+    }
+
+    /* Add hover effect */
+    .roadmap_item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .roadmap_item {
+        width: 100%;
+      }
+
+      .roadmap_container {
+        margin-bottom: 50px;
+      }
+    }
+
+    .layout_padding,
+    .layout_padding2-bottom {
+      padding: 0 !important;
+    }
+
+    #charactersContainer {
+      display: flex;
+      justify-content: center;
+      padding: 0 65px;
+      flex-wrap: wrap;
+      padding-top: 160px !important;
+      padding-bottom: 50px !important;
+    }
+
+    #teamContainer {
+      display: flex;
+      justify-content: center;
+      padding: 0 65px;
+      flex-wrap: wrap;
+      padding-top: 50px !important;
+      padding-bottom: 80px !important;
+    }
+  </style>
+  <style>
+    /* Following is for partner section's animation */
+    @keyframes slideIn {
+      0% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Apply the animation when the element is visible */
+    
+    .partner-logo.visible {
+      animation: slideIn 0.5s ease-out forwards;
+    }
+  </style>
+  <style>
+    /* Following is for Roadmap animation */
+    .roadmap_item {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .roadmap_item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Roadmap item hover effect */
+    .roadmap_item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+  <style>
+    .moving-row img {
+      background: linear-gradient(to bottom right, #da9d80, #c24d00);
+    }
+
+    .moving-row.reverse img {
+      background: linear-gradient(to top left, #da9d80, #c24d00);
+    }
+  </style>
+  <style>
+    /* Adjusting the container to include the border and position video and text */
+    .character-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      margin-top: 30px;
+      margin-bottom: 0 !important;
+      height: 85%;
+    }
+
+    .mobile-video-box{display:none !important;}
+    .video-box {
+      width: 60%;
+      z-index: 2;
+      padding: 5px;
+      border-radius: 20px;
+    }
+
+    .detail-box {
+      background: rgba(0, 0, 0, 0.75);
+      background-size: 100% 100%;
+      width: 80%;
+      /* overflow-y: auto; */
+      z-index: 1;
+      padding: 40px;
+      padding-bottom: 0 !important;
+      border-radius: 20px;margin-top: 100px;
+    }
+  </style>
+  <style>
+    .about_section .row {
+      padding-bottom: 6% !important;
+    }
+
+    .character-box {
+      display: flex;
+      flex-direction: column; /* Ensure elements stack vertically */
+      justify-content: center; /* Center elements vertically */
+      align-items: center; /* Center elements horizontally */
+    }
+
+    .detail-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; /* Center text inside detail box */
+    }
+
+    .video-box {
+      width: 100%;
+    }
+  </style>
+  <style>
+    /* Following CSS is for the Fixed social icons on the left side of the screen ---------------------------------------------------------- */
+    .fixed-social-icons {
+      position: fixed;
+      top: 50%;
+      left: 10px; /* Adjust this value to position it properly */
+      transform: translateY(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    /* Telegram */
+    .telegram-icon .social-icon-bloom {
+      border-color: #fff;
+    }
+    .telegram-icon .social-icon-sparkle-line::before {
+      background: #fff;
+    }
+    .telegram-icon:hover .social-icon-shape {
+      fill: #fff;
+    }
+
+    /* Linktree */
+    .linktree-icon .social-icon-bloom {
+      border-color: #fff;
+    }
+    .linktree-icon .social-icon-sparkle-line::before {
+      background: #fff;
+    }
+    .linktree-icon:hover .social-icon-shape {
+      fill: #fff;
+    }
+
+    .social-icon {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Add circular opaque background */
+    .social-icon {
+      background-color: rgba(0, 0, 0, 0.5); /* Opaque background */
+      border-radius: 50%; /* Make it circular */
+    }
+
+    .social-icon:hover .social-icon-bloom {
+      -webkit-animation: background 0.5s ease both;
+      animation: background 0.5s ease both;
+    }
+
+    .social-icon:hover .social-icon-sparkle-line::before {
+      -webkit-animation: line 1s ease both;
+      animation: line 1s ease both;
+    }
+
+    .social-icon:hover .social-icon-shape {
+      -webkit-animation: shapeAnimation 1s ease both;
+      animation: shapeAnimation 1s ease both;
+    }
+
+    .social-icon-bloom {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      border-width: 0;
+      border-style: solid;
+      will-change: border-width;
+      border-color: #dee0e0;
+    }
+
+    .social-icon-sparkle-line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .social-icon-sparkle-line::before {
+      position: absolute;
+      z-index: 1;
+      top: 30%;
+      width: 4px;
+      height: 0;
+      left: calc(50% - 2px);
+      border-radius: 2px;
+      will-change: top, height;
+      content: "";
+    }
+    .social-icon-sparkle-line:nth-child(1) {
+      -webkit-transform: rotate(40deg);
+      transform: rotate(40deg);
+    }
+    .social-icon-sparkle-line:nth-child(2) {
+      -webkit-transform: rotate(110deg);
+      transform: rotate(110deg);
+    }
+    .social-icon-sparkle-line:nth-child(3) {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    .social-icon-sparkle-line:nth-child(4) {
+      -webkit-transform: rotate(250deg);
+      transform: rotate(250deg);
+    }
+    .social-icon-sparkle-line:nth-child(5) {
+      -webkit-transform: rotate(320deg);
+      transform: rotate(320deg);
+    }
+
+    .social-icon-shape {
+      z-index: 1;
+      padding: 18px;
+      width: 100%;
+      height: 100%;
+      fill: #dee0e0 !important;
+      -webkit-transition: fill 0.3s ease;
+      transition: fill 0.3s ease;
+    }
+
+    /* Twitter */
+    .twitter-icon .social-icon-bloom {
+      border-color: #fff;
+    }
+    .twitter-icon .social-icon-sparkle-line::before {
+      background: #fff;
+    }
+    .twitter-icon:hover .social-icon-shape {
+      fill: #fff;
+    }
+
+    /* Twitter */
+    .facebook-icon .social-icon-bloom {
+      border-color: #fff;
+    }
+    .facebook-icon .social-icon-sparkle-line::before {
+      background: #fff;
+    }
+    .facebook-icon:hover .social-icon-shape {
+      fill: #fff;
+    }
+
+    /* Instagram */
+    .instagram-icon .social-icon-bloom {
+      border-color: #fff;
+    }
+    .instagram-icon .social-icon-sparkle-line::before {
+      background: #fff;
+    }
+    .instagram-icon:hover .social-icon-shape {
+      fill: #fff;
+    }
+
+    /* Snapchat */
+    .snapchat-icon .social-icon-bloom {
+      border-color: #fff;
+    }
+    .snapchat-icon .social-icon-sparkle-line::before {
+      background: #fff;
+    }
+    .snapchat-icon:hover .social-icon-shape {
+      fill: white;
+    }
+
+    @-webkit-keyframes line {
+      0% {
+        top: 30%;
+        height: 0;
+      }
+      40% {
+        opacity: 1;
+        height: 14px;
+      }
+      100% {
+        opacity: 0;
+        top: 10%;
+        height: 0;
+      }
+    }
+
+    @keyframes line {
+      0% {
+        top: 30%;
+        height: 0;
+      }
+      40% {
+        opacity: 1;
+        height: 14px;
+      }
+      100% {
+        opacity: 0;
+        top: 10%;
+        height: 0;
+      }
+    }
+    @-webkit-keyframes shapeAnimation {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      20% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      30% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      60% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      70% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @keyframes shapeAnimation {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      20% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      30% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      60% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      70% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @-webkit-keyframes background {
+      0% {
+        border-width: 40px; /* half icon width */
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      90% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      100% {
+        border-width: 0;
+      }
+    }
+    @keyframes background {
+      0% {
+        border-width: 40px;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      90% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      100% {
+        border-width: 0;
+      }
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* Following is for styling the Upcoming features --------------------------------------------------------- */
+
+    .unique-features-section .heading_container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .unique-features-section .heading_container p {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .unique-features-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .unique-features-box {
+      background-color: transparent !important; /* Make background transparent to remove white box */
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: none !important; /* Remove box shadow */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .unique-features-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .unique-features-icon-box {
+      text-align: center;
+      font-size: 50px;
+      color: #d39153;
+      margin-bottom: 20px;
+    }
+
+    .unique-features-icon-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .unique-features-box a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Following is styling for how to buy section ---------------------------------------------------------  */
+
+    .buy_section .heading_container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .buy_section .heading_container p {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .detail_container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .box {
+      background-color: white;
+      width: 100%;
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon-box {
+      text-align: center;
+      font-size: 50px;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .top-box h5 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .bottom-box p {
+      text-align: center;
+      color: #000;
+    }
+
+    .unique-screenshot {
+      display: block;
+      margin: 10px auto;
+      width: 100%;
+      max-width: 300px; /* Restrict the size */
+      border-radius: 10px;
+    }
+
+    .unique-detail-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center the boxes */
+    }
+
+    .unique-box {
+      background-color: white;
+      width: 100%;
+      /*max-width: 600px; /* Restrict the size */
+      margin: 20px auto; /* Center the box */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 95%;
+    }
+
+    /* Moving images section  --------------------------------------------------------- */
+    .moving_images_section {
+      padding-bottom: 20px;
+      margin-top: 60px;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .moving-row {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-bottom: 10px;
+    }
+
+    .moving-container {
+      display: flex;
+      width: fit-content;
+      animation: slideX 100s linear infinite;
+    }
+
+    .moving-row.reverse .moving-container {
+      animation-direction: reverse;
+    }
+
+    .moving-row img {
+      height: 400px;
+      margin: 0 5px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @-webkit-keyframes slideX {
+      100% {
+        -webkit-transform: translateX(-15%);
+        transform: translateX(-15%);
+      }
+      0% {
+        -webkit-transform: translateX(calc(-85%));
+        transform: translateX(calc(-85%));
+      }
+    }
+
+    @keyframes slideX {
+      100% {
+        -webkit-transform: translateX(-15%);
+        transform: translateX(-15%);
+      }
+      0% {
+        -webkit-transform: translateX(calc(-85%));
+        transform: translateX(calc(-85%));
+      }
+    }
+
+    /* Animation won't work if you prefer reduced motion */
+    @media (prefers-reduced-motion) {
+      .moving-row {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .moving-container {
+        animation: none;
+      }
+    }
+
+    /* Following is for Team section --------------------------------------------------------- */
+    .team_section {
+      padding: 60px 0;
+    }
+
+    .team_container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .team-box {
+      position: relative;
+      width: 30%;
+      /* height: 700px; Increased height for minimized state */
+      margin: 20px;
+      /* border: 3px solid #000; */
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+
+    .team-img-box {
+      width: 100%;
+      /* height: 70%; */
+      overflow: hidden;
+    }
+
+    .team-img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+
+    .team-detail-box {
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .team-more-info,
+    .team-plus-icon,
+    .team-close-icon {
+      display: none;
+    }
+
+    /* .team-box:hover .team-plus-icon {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border-radius: 50%;
+      width: 50px; 
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 30px;
+      z-index: 1;
+    } */
+
+    .team-box.active .team-plus-icon {
+      display: none;
+    }
+
+    .team-box.active .team-close-icon {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border-radius: 50%;
+      width: 50px; /* Match the size of the plus button */
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 30px; /* Match the font size of the plus button */
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .team-box.active {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      /* height: 80%; */
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+      display: flex;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      flex-direction: row; /* Ensure content is in a row */
+      align-items: flex-start; /* Align items to the top */
+      transition: none; /* Remove transition */
+    }
+
+    .team-box.active .team-img-box {
+      width: 40%; /* Allocate 30% for the image */
+      height: auto;
+      /* padding-right: 20px; Add some spacing between image and text
+      padding-top: 40px; */
+    }
+
+    .team-box.active .team-more-info {
+      width: 60%; /* Allocate the remaining 70% for the text */
+      display: block;
+      float: right;
+      padding-left: 20px; /* Add some padding to the left for spacing */
+      text-align: center;
+      overflow-y: auto !important;
+    }
+
+    .team-box.active .team-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .team-img-text {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      color: #000;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .team-box {
+      background-color: #f0f0f0; /* Light grey background color */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    .team-box:hover {
+      transform: translateY(-20px); /* Slight upward movement on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-img-box {
+      /* height: 300px;  */
+      border-radius: 15px 15px 0 0; /* Rounded top corners */
+    }
+
+    .team-img-text {
+      font-weight: bold;
+    }
+
+    /* Ensure these existing selectors are updated or present */
+    .team-more-info,
+    .team-plus-icon,
+    .team-close-icon {
+      display: none;
+    }
+
+    /* Following CSS if For the Video Section --------------------------------------------------------- */
+    .video-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-section button {
+      position: absolute;
+      /* top: 10px;
+         right: 10px; */
+    }
+
+    #videoControl,
+    #muteControl {
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-section #muteControl {
+      right: 50px; /* Position the mute button next to the play/pause button */
+      margin-right: 10px;
+    }
+
+    .video-section button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .video-section button i {
+      font-size: 20px; /* Ensure both icons are the same size */
+    }
+
+    /* Loader animation styling --------------------------------------------------------- */
+    #background {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #8a4f3a; /* Your desired background color */
+      z-index: -1;
+    }
+    #wrap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+    #wrap canvas {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 500px;
+      height: 500px;
+      margin: -250px 0 0 -250px;
+    }
+    .info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      font-size: 12px;
+      color: #ccc;
+      line-height: 2em;
+      text-align: center;
+    }
+
+    /* Updated CSS for partner logos */
+    .partner-logo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* gap: 20px; */
+      margin-top: 20px;
+    }
+
+    .partner-logo {
+      flex: 1 1 150px; /* Adjusts the base size of the logo box */
+      max-width: 170px; /* Ensures the maximum width for each logo */
+      display: flex;
+      justify-content: center;
+    }
+
+    .partner-logo img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 2px 4px 9px rgba(255, 255, 255, 0.2); /* Subtle glow effect */
+    }
+
+    .partner-logo:hover img {
+      transform: translateY(-5px);
+      box-shadow: 2px 4px 9px rgba(255, 255, 255, 0.4); /* More pronounced glow on hover */
+
+    }
+  </style>
+  <style>
+    .img-fluid {
+      /* width: 80%; */
+      border-radius: 15px;
+      /* padding: 10px; */
+    }
+
+    .roadmap_container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    .roadmap_item {
+      flex: 0 0 auto;
+      /* margin-right: 40px; Optional spacing between items */
+    }
+
+    .scroll-button {
+      background-color: rgba(0, 0, 0, 1);
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 100%;
+      padding: 20px;
+      font-size: 5px;
+      cursor: pointer;
+      position: absolute;
+      bottom: 75px;
+    }
+
+    .scroll-button:active {
+      outline: none;
+    }
+
+    .scroll-button:focus {
+      outline: none;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .left-scroll {
+      left: 18px;
+    }
+
+    .right-scroll {
+      right: 18px;
+    }
+    .scroll-button::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .left-scroll::before {
+      border-width: 10px 15px 10px 0;
+      border-color: transparent grey transparent transparent;
+      transform: translate(-50%, -50%);
+    }
+
+    .right-scroll::before {
+      border-width: 10px 0 10px 15px;
+      border-color: transparent transparent transparent grey;
+      transform: translate(-50%, -50%);
+    }
+
+    /* .scroll-button:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+      transform: translateY(-50%) scale(1.1);
+    } */
+    .roadmap_section {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 60px;
+    }
+  </style>
+  <style>
+    /* Add @font-face rule to your CSS */
+    @font-face {
+    font-family: 'Plasdrip';
+    src: url('/fonts/plasdrip.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    @font-face {
+      font-family: "Blacknorthdemo";
+      src: url("/fonts/Blacknorthdemo-mLE25.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: "ridersofthewildwest";
+      src: url("/fonts/ridesofthewildwest.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Apply the font to headings */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Blacknorthdemo", sans-serif;
+    }
+  </style>
+  <style>
+    .video-box {
+      background-color: transparent;
+    }
+
+    #welcomeVideo {
+      background-color: transparent;
+    }
+  </style>
+  <style>
+    /* Following is to make the Welcome to PinguLand section responsive ------------------------------------ */
+    /* Add media query for mobile devices */
+    @media (max-width: 768px) {
+      .slider_section .heading_container h2 {
+        font-size: 1.5em; /* Adjust the font size for mobile */
+      }
+
+      .character-box {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: center;
+        text-align: center;
+        padding-bottom: 150px;
+      }
+
+      .video-box {
+        width: 100%; /* Make video take full width on mobile */
+        padding: 0; /* Remove padding */
+      }
+
+      .detail-box {
+        width: 100%; /* Make detail box take full width on mobile */
+        padding: 0 10px; /* Add some padding for better readability */
+      }
+
+      .detail-box p {
+        font-size: 1em; /* Adjust font size for better readability on mobile */
+      }
+
+      /* #heroArea.active {
+        margin-top: 50px; 
+      } */
+
+      .about_section .heading_container {
+        margin-top: 20px;
+      }
+
+      .roadmap_section .heading_container h2 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .roadmap_section {
+        top: 60px;
+      }
+
+      .container-fluid {
+        padding-top: 100px;
+      }
+
+      #roadmap_video {
+        width: 100% !important;
+        margin-top: 160px;
+        /* margin-bottom: 120px; */
+      }
+
+      .roadmap_item {
+        height: 620px;
+        padding: 40px;
+      }
+
+      .moving_images_section {
+        margin-top: 5 0px;
+      }
+
+      .moving-row img {
+        height: 325px;
+      }
+
+      .buy_section_container {
+        padding-top: 150px;
+      }
+
+      .team-box {
+        width: 90%;
+      }
+
+      .footer_section .container {
+        padding-right: 0;
+      }
+    }
+
+    /* Enlarge video */
+    .video-box {
+      width: 100%; /* Adjust the width as needed */
+      margin: 0 auto; /* Center the video */
+    }
+
+    /* Ensure text appears faster */
+    .animated {
+      opacity: 0;
+      animation-duration: 0.2s; /* Faster animation duration */
+      animation-fill-mode: forwards;
+    }
+
+    .fade-in-up {
+      animation-name: fadeInUp;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translate3d(0, 50%, 0); /* Adjusted for faster appearance */
+        opacity: 0;
+      }
+      to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+
+    /* General visibility improvement for text */
+    .visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    @media (max-width: 768px) {
+      .slider_section {
+        padding-bottom: 0 !important;
+      }
+
+      .about_section .content_container {
+        top: 60px;
+      }
+    }
+
+    /* Add media query for tablet devices */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .slider_section {
+        padding-bottom: 0 !important;
+      }
+
+      .roadmap_item {
+        width: 40%;
+      }
+    }
+  </style>
+  <style>
+    .team-box.active {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      /* height: 81.5%; */
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+      display: flex;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      flex-direction: row; /* Ensure content is in a row */
+      align-items: flex-start; /* Align items to the top */
+      transition: none; /* Remove transition */
+    }
+
+    .team-box.active .team-img-box {
+      width: 40%; /* Allocate 40% for the image */
+      height: auto;
+      padding-right: 20px; /* Add some spacing between image and text */
+    }
+
+    .team-box.active .team-more-info {
+      width: 60%; /* Allocate 60% for the text */
+      display: block;
+      float: right;
+      padding-left: 20px; /* Add some padding to the left for spacing */
+      text-align: left; /* Align text to the left */
+      overflow-y: auto !important;
+      margin-top: -38%;
+    }
+
+    .team-box.active .team-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Styles for mobile screens */
+    @media (max-width: 768px) {
+      .team-box.active {
+        flex-direction: column;
+        width: 80%;
+        max-height: 80%; /* Ensure it doesn't take up too much vertical space */
+        padding: 20px;
+        overflow-y: auto; /* Make the container scrollable */
+        align-items: center;
+        margin-left: 0px !important;
+        left: 50% !important;
+      }
+
+      .team-box.active .team-img-box {
+        display: none; /* Hide the image box on mobile */
+      }
+
+      .team-box.active .team-more-info {
+        width: 100%; /* Make the text container full width */
+        padding: 0; /* Remove left padding */
+        text-align: left; /* Left align text for readability */
+        overflow-y: auto; /* Make text container scrollable */
+
+        margin-top: 10px;
+      }
+    }
+  </style>
+  <style>
+    /* Add this CSS for the welcomeVideo on mobile devices */
+    @media (max-width: 768px) {
+      #welcomeVideo {
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%) scale(1.25);
+        margin: 10px 0;
+      }
+    }
+
+    /* Disable animation for mobile devices */
+    @media (max-width: 768px) {
+      .animated {
+        opacity: 1 !important;
+        animation: none !important;
+      }
+      .fade-in-up {
+        transform: none !important;
+      }
+    }
+
+    /* Hide mobile text by default */
+    .mobile-text, .buy-mobile-text {
+      display: none;
+    }
+
+    /* Show mobile text and hide desktop text on smaller screens */
+    @media (max-width: 768px) {
+      .desktop-text {
+        display: none;
+      }
+      .mobile-text, .buy-mobile-text {
+        display: block;
+      }
+    }
+  </style>
+  <style>
+    .footer-ca-row{
+      display:none;
+    }
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+      
+      .ca-row, .footer-ca-row{
+        order: 3;
+        margin-bottom: 20px !important;
+        font-size: 0.9rem;
+        display:none;
+      }
+      .footer-ca-row{
+        margin-top: 20px !important;
+        display:block;
+      }
+      .video-box {
+        order: 0; /* Move video box to the top */
+        margin-top: 20px;
+        margin-bottom: 40px;
+        display:none !important;
+      }
+      .mobile-video-box{
+        display: unset !important;
+      }
+      .partner-logo-container {
+        order: 2;
+      }
+      .mobile-text {
+        order: 1;
+        padding-top: 20px;
+      }
+
+      #buy_section_heading_container {
+        padding-top: 23px !important;
+      }
+    }
+  </style>
+  <style>
+    /* Add these styles for the arrow and scroll effect */
+    @media only screen and (max-width: 768px) {
+      #team-more-info {
+        max-height: 200px; /* Ensure this height fits your design */
+        overflow-y: auto; /* Ensure vertical scrolling */
+      }
+
+      .team-box.active::after {
+        content: "\f078"; /* FontAwesome icon for arrow down */
+        font-family: "FontAwesome";
+        font-size: 24px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        /* background: rgba(0, 0, 0, 0.75); */
+        border-radius: 50%;
+        padding: 5px;
+        color: #000;
+        cursor: pointer;
+        /* opacity: 0; */
+        /* transition: opacity 0.3s ease; */
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .team-box.active.show-scroll-arrow::after {
+        opacity: 0.65;
+      }
+
+      .team-box.active.at-bottom::after {
+        opacity: 0;
+      }
+      .team-box.active:active::after {
+        transform: translateY(
+          50px
+        ); /* Adjust the value to control the scroll distance */
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .team-box.active .team-content-wrapper {
+        position: relative;
+        overflow-y: auto;
+        height: 95%; /* Adjust as needed */
+      }
+
+      .team-box.active .team-content-wrapper::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      .team-box.active.at-bottom .team-content-wrapper::before {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .heading_container {
+        padding-top: 0px !important;
+      }
+
+      #moving_images_heading_container {
+        padding-top: 0px !important;
+      }
+
+      #first_moving_row {
+        padding-top: 150px !important;
+      }
+    }
+  </style>
+  <script>
+    /* Add this JavaScript for scroll detection and arrow visibility */
+    document.querySelectorAll(".team-content-wrapper").forEach((wrapper) => {
+      wrapper.addEventListener("scroll", function () {
+        const teamBox = this.closest(".team-box");
+        const scrollTop = this.scrollTop;
+        const scrollHeight = this.scrollHeight;
+        const clientHeight = this.clientHeight;
+        const threshold = 5; // Threshold value to handle floating point precision
+
+        if (scrollTop + clientHeight < scrollHeight - threshold) {
+          console.log("if scrollTop + clientHeight < scrollHeight");
+          teamBox.classList.add("show-scroll-arrow");
+          teamBox.classList.remove("at-bottom");
+        } else {
+          console.log("(else)if not scrollTop + clientHeight < scrollHeight");
+          teamBox.classList.remove("show-scroll-arrow");
+          teamBox.classList.add("at-bottom");
+        }
+      });
+    });
+
+    // Following code is for scroll effect for the Roadmap video
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   const roadmapVideo = document.getElementById("roadmap_video");
+    //   let lastScrollPosition = 0;
+
+    //   function applyScrollEffect() {
+    //     const scrollPosition = window.scrollY;
+    //     const windowHeight = window.innerHeight;
+    //     const videoTop =
+    //       roadmapVideo.getBoundingClientRect().top + scrollPosition;
+    //     const videoHeight = roadmapVideo.clientHeight;
+    //     const video70Percent = videoTop + videoHeight * 0.25;
+    //     const viewportCenter = scrollPosition + windowHeight / 2;
+    //     const viewportBottom80 = scrollPosition + windowHeight * 0.32;
+
+    //     const scale = 2.8; // Scale for the video
+    //     const initialTranslateX = 134; // Start translateX
+    //     const finalTranslateX = -134; // End translateX
+
+    //     if (
+    //       viewportBottom80 >= video70Percent &&
+    //       viewportBottom80 <= videoTop + videoHeight
+    //     ) {
+    //       const maxScroll = videoHeight + windowHeight;
+    //       const scrollProgress =
+    //         (viewportBottom80 - video70Percent) /
+    //         (videoTop + videoHeight - video70Percent);
+    //       const translateX =
+    //         initialTranslateX -
+    //         scrollProgress * (initialTranslateX - finalTranslateX);
+
+    //       // Apply the translation and scale smoothly
+    //       roadmapVideo.style.transform = `scale(${scale}) translateX(${translateX}px)`;
+    //       roadmapVideo.style.transition = "transform 0.3s ease-out"; // Smooth transition with slightly longer duration
+    //     } else if (viewportBottom80 < video70Percent) {
+    //       // Reset the video position to the starting point if scrolling above 70% of the video
+    //       roadmapVideo.style.transform = `scale(${scale}) translateX(${initialTranslateX}px)`;
+    //       roadmapVideo.style.transition = "transform 0.3s ease-out";
+    //     } else {
+    //       // Lock the video at the final position after scrolling past the video section
+    //       roadmapVideo.style.transform = `scale(${scale}) translateX(${finalTranslateX}px)`;
+    //       roadmapVideo.style.transition = "transform 0.3s ease-out";
+    //     }
+
+    //     lastScrollPosition = scrollPosition;
+    //   }
+
+    //   function checkDevice() {
+    //     if (window.innerWidth <= 768) {
+    //       window.addEventListener("scroll", applyScrollEffect);
+    //     } else {
+    //       window.removeEventListener("scroll", applyScrollEffect);
+    //       roadmapVideo.style.transform = ""; // Reset the transform on non-mobile devices
+    //     }
+    //   }
+
+    //   // Initial check
+    //   checkDevice();
+
+    //   // Recheck on resize
+    //   window.addEventListener("resize", checkDevice);
+    // });
+  </script>
+  <script>
+    // document.querySelectorAll(".team-box .team-plus-icon").forEach((arrow) => {
+    //   arrow.addEventListener("click", function (event) {
+    //     event.stopPropagation();
+    //     const teamBox = this.closest(".team-box");
+    //     teamBox.classList.add("active");
+    //     teamBox.scrollTop = 0; // Scroll to the top initially
+    //   });
+    // });
+
+    // document.querySelectorAll(".team-box .team-close-icon").forEach((close) => {
+    //   close.addEventListener("click", function (event) {
+    //     event.stopPropagation();
+    //     const teamBox = this.closest(".team-box");
+    //     teamBox.classList.remove("active");
+    //   });
+    // });
+  </script>
+  <style>
+    @media (min-width: 1024px) {
+      .scroll-button {
+        display: none;
+      }
+
+      .dots-container {
+        display: none !important;
+      }
+
+      #roadmap_video {
+        margin-top: 250px;
+        margin-bottom: 200px;
+      }
+    }
+
+    .roadmap_section {
+      position: relative;
+    }
+
+    .dots-container {
+      position: absolute;
+      bottom: 90px; /* Adjust as needed to position the dots slightly over the boxes */
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      background-color: #fff;
+      border: 1px solid #000; /* Add border around the dots */
+      border-radius: 50%;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #d4af37; /* Highlight color for active dot */
+    }
+  </style>
+  <script>
+    // Add this function to your JavaScript to update the active dot based on the scroll position
+    // function updateActiveDot() {
+    //   const roadmapContainer = document.querySelector(".roadmap_container");
+    //   const dots = document.querySelectorAll(".dot");
+    //   const scrollLeft = roadmapContainer.scrollLeft;
+    //   const totalWidth =
+    //     roadmapContainer.scrollWidth - roadmapContainer.clientWidth;
+    //   const scrollPercentage = scrollLeft / totalWidth;
+    //   const activeDotIndex = Math.round(scrollPercentage * (dots.length - 1));
+
+    //   dots.forEach((dot, index) => {
+    //     if (index === activeDotIndex) {
+    //       dot.classList.add("active");
+    //     } else {
+    //       dot.classList.remove("active");
+    //     }
+    //   });
+    // }
+
+    // // Call this function when the page is loaded
+    // document.addEventListener("DOMContentLoaded", () => {
+    //   const roadmapContainer = document.querySelector(".roadmap_container");
+    //   roadmapContainer.addEventListener("scroll", updateActiveDot);
+    //   updateActiveDot();
+    // });
+
+    // // Call this function when the scroll buttons are clicked
+    // function scrollRight() {
+    //   const container = document.querySelector(".roadmap_container");
+    //   container.scrollBy({ left: 395, behavior: "smooth" });
+    //   updateActiveDot();
+    // }
+
+    // function scrollRoadmapLeft() {
+    //   const container = document.querySelector(".roadmap_container");
+    //   container.scrollBy({ left: -395, behavior: "smooth" });
+    //   updateActiveDot();
+    // }
+
+    // Following is for the evolution video :
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   const welcomeVideo = document.getElementById("welcomeVideo");
+
+    //   // Ensure video plays when it can start playing
+    //   welcomeVideo.addEventListener("canplay", () => {
+    //     console.log("Video is ready to play.");
+    //     welcomeVideo
+    //       .play()
+    //       .catch((err) => console.error("Error playing video:", err));
+    //   });
+
+    //   // Reload and play video when it stalls
+    //   welcomeVideo.addEventListener("stalled", function () {
+    //     console.log("Video stalled, attempting to reload and play.");
+    //     this.load();
+    //     this.play().catch((err) =>
+    //       console.error("Error playing video after reload:", err),
+    //     this.load(),
+    //     this
+    //       .play()
+    //       .catch((err) =>
+    //         console.error("Error playing video after error:", err)
+    //       )
+    //     );
+    //   });
+
+    //   // Handle video ended event
+    //   welcomeVideo.addEventListener("ended", () => {
+    //     console.log("Video ended, looping back to start.");
+    //     welcomeVideo.currentTime = 0;
+    //     welcomeVideo
+    //       .play()
+    //       .catch((err) =>
+    //         console.error("Error playing video after looping:", err)
+    //       );
+    //   });
+
+    //   // Handle video error event
+    //   welcomeVideo.addEventListener("error", (e) => {
+    //     console.error("Video error occurred:", e);
+    //     welcomeVideo.load();
+    //     welcomeVideo
+    //       .play()
+    //       .catch((err) =>
+    //         console.error("Error playing video after error:", err)
+    //       );
+    //   });
+
+    //   // Pause video and clean up on page unload
+    //   window.addEventListener("beforeunload", () => {
+    //     console.log("Page is unloading, pausing and cleaning up video.");
+    //     welcomeVideo.pause();
+    //     welcomeVideo.removeAttribute("src");
+    //     welcomeVideo.load();
+    //   });
+
+    //   // Ensure video plays immediately if it can
+    //   if (welcomeVideo.readyState >= 3) {
+    //     // Have enough data to start playing
+    //     welcomeVideo
+    //       .play()
+    //       .catch((err) =>
+    //         console.error("Error playing video on page load:", err)
+    //       );
+    //   } else {
+    //     welcomeVideo.addEventListener("loadeddata", () => {
+    //       console.log("Video data loaded, attempting to play.");
+    //       welcomeVideo
+    //         .play()
+    //         .catch((err) =>
+    //           console.error("Error playing video after data load:", err)
+    //         );
+    //     });
+    //   }
+    // });
+  </script>
+  <style>
+    .scrolling-banner {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .copy-icon {
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    /* Centered Tooltip */
+    .tooltip {
+      visibility: hidden;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 14px;
+      z-index: 1000;
+      transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+      opacity: 0;
+    }
+
+    .tooltip.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+
+  <script>
+    function copyText(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      // Show tooltip at the center of the viewport
+      const tooltip = document.getElementById("copy-tooltip");
+      tooltip.classList.add("show");
+
+      // Hide tooltip after 1 second
+      setTimeout(() => {
+        tooltip.classList.remove("show");
+      }, 1000);
+    }
+  </script>
+  <style>
+    /* Basic styling for the contract address */
+    #contract-address {
+      cursor: pointer;
+      position: relative;
+    }
+
+    /* Styling for the move logo */
+    .move-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    /* Change the move logo appearance on hover over the contract address */
+    #contract-address:hover + .move-icon {
+      transform: rotate(20deg); /* Example effect */
+    }
+
+    @media (max-width: 768px) {
+      /* Adjust as needed for your mobile breakpoint */
+      .button-container {
+        /* Container holding the buttons */
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        height: 100vh; /* Full viewport height to center vertically */
+        padding: 1rem; /* Optional padding for spacing */
+      }
+    }
+
+    @media only screen and (max-width: 427px) {
+      /* Hide specific span element */
+      #contractToHide {
+        display: none !important;
+      }
+    }
+
+    @media screen and (max-width: 1000px) and (max-height: 490px) {
+      #roadmap_video, .moving_images_section{
+        margin-top: 180px;
+      }
+    }
+  </style>
+
+  
+</html>
